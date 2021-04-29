@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.12">
 <meta name="author" content="2021-04-29">
-<title>RoboCup 2021 SSL Vision Blackout Technical Challenge Rules</title>
+<title>RoboCup 2021 SSL Ball Placement Technical Challenge Rules</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
@@ -441,7 +441,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </head>
 <body class="article">
 <div id="header">
-<h1>RoboCup 2021 SSL Vision Blackout Technical Challenge Rules</h1>
+<h1>RoboCup 2021 SSL Ball Placement Technical Challenge Rules</h1>
 <div class="details">
 <span id="author" class="author">2021-04-29</span><br>
 </div>
@@ -451,23 +451,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_goals_of_the_technical_challenge">1. Goals of the Technical Challenge</a>
 <ul class="sectlevel2">
 <li><a href="#_participation_requirements">1.1. Participation Requirements</a></li>
-<li><a href="#_overview_of_competition_stages">1.2. Overview of Competition Stages</a></li>
 </ul>
 </li>
-<li><a href="#_hardwaresoftware_requirements">2. Hardware/Software Requirements</a>
-<ul class="sectlevel2">
-<li><a href="#_robot_hardware">2.1. Robot Hardware</a></li>
-<li><a href="#_field_setup">2.2. Field Setup</a></li>
-</ul>
-</li>
-<li><a href="#_competition_procedure">3. Competition Procedure</a>
-<ul class="sectlevel2">
-<li><a href="#_stage_1_grab_a_stationary_ball">3.1. Stage 1: Grab a Stationary Ball</a></li>
-<li><a href="#_stage_2_scoring_on_an_empty_goal">3.2. Stage 2: Scoring on an Empty Goal</a></li>
-<li><a href="#_stage_3_scoring_on_a_statically_defended_goal">3.3. Stage 3: Scoring on a Statically Defended Goal</a></li>
-</ul>
-</li>
-<li><a href="#_overall_scoring">4. Overall Scoring</a></li>
+<li><a href="#_procedure">2. Procedure</a></li>
+<li><a href="#_evaluation">3. Evaluation</a></li>
 </ul>
 </div>
 </div>
@@ -482,7 +469,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-References to the male gender in the rules with respect to referees, team members, officials, etc. are for simplification and apply to both males and females.
+References to the male gender in the rules with respect to referees, team
+members, officials, etc. are for simplification and apply to both males and
+females.
 </td>
 </tr>
 </table>
@@ -493,372 +482,74 @@ References to the male gender in the rules with respect to referees, team member
 <h2 id="_goals_of_the_technical_challenge">1. Goals of the Technical Challenge</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The goal of this technical challenge is to incentivize teams to
-explore local sensing and processing rather than the typical SSL
-approach of an off-board computer and a global set of cameras sensing
-the environment. While the main league still uses the standard SSL
-vision software with overhead cameras, there is desire to reduce the
-reliance on this vision system. We believe that not only will more
-distributed sensing and processing on robots help advance research in
-this league, it will provide a benefit to teams who take this
-approach.</p>
-</div>
-<div class="paragraph">
-<p>Overall, this technical challenge will focus on demonstrating standard
-SSL soccer skills (e.g. locomotion and ball manipulation) in without
-the ssl-vision software running. The challenge is split into multiple
-stages designed to have different levels of difficulty, with each
-stage building on the skills of the prior.</p>
+<p>Given the goal of preparing Division B teams to participate in Division A, this
+technical challenge aims to incentive Division B teams to develop one of the
+skills needed to play a match in Division A. In this case, the challenge is to
+autonomously place the ball using the robots ("<strong>AutoPlacement</strong>").</p>
 </div>
 <div class="sect2">
 <h3 id="_participation_requirements">1.1. Participation Requirements</h3>
 <div class="paragraph">
-<p>Anyone participating in SSL RoboCup is eligible to participate in this
-challenge. Anyone participating must publish their approach to solving
-this technical challenege after the competition has concluded. The
-goal of forcing publication is that other participants in the league
-and the wider research community can learn and benefit from those that
-participated.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_overview_of_competition_stages">1.2. Overview of Competition Stages</h3>
-<div class="paragraph">
-<p>The competition will consist of four stages:</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Grab a stationary ball somewhere on the field</p>
-</li>
-<li>
-<p>Score with the ball on an empty goal</p>
-</li>
-<li>
-<p>Score with the ball on a statically defended goal</p>
-</li>
-<li>
-<p><del>Move the robot to specific coordinates</del></p>
-</li>
-</ol>
+<p>All Division B teams are eligible and <strong>must</strong> participate in this challenge.</p>
 </div>
 <div class="paragraph">
-<p>Stage 1 is designed to demonstrate basic sensing and locomotion
-capabilities of each participating team.</p>
-</div>
-<div class="paragraph">
-<p>Stage 2 is designed to demonstrate similar skills to stage 1 plus the
-ability to localize and aim at a known target on the field.</p>
-</div>
-<div class="paragraph">
-<p>Stage 3 builds on stage 2 where now the participant&#8217;s robot must
-detect which portion of the goal is unblocked when aiming and
-shooting.</p>
-</div>
-<div class="paragraph">
-<p><del>Stage 4 demonstrates ball manipulation skills and strong localization
-abilities without the use of the global vision system.</del> Stage 4 has
-been removed for the remote competition, as each team may have a different field
-setup with different coordinate systems.</p>
-</div>
-<div class="paragraph">
-<p>We believe that teams who can complete even a single one of these
-skills without the vision system information will have an advantage in
-the main competition over those teams who rely solely on the global
-vision system.</p>
-</div>
-<div class="paragraph">
-<p>The following sections describe the hardware requirements, and
-procedures of each stage. The final chapter describes overall scoring
-that will be used to determine the winner.</p>
+<p>Also, this challenge must be performed with <strong>real robots</strong>, i.e., not using the
+simulator. In case of any problems regarding access to your labs, please
+contact the TC/OC.</p>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_hardwaresoftware_requirements">2. Hardware/Software Requirements</h2>
+<h2 id="_procedure">2. Procedure</h2>
 <div class="sectionbody">
-<div class="sect2">
-<h3 id="_robot_hardware">2.1. Robot Hardware</h3>
 <div class="paragraph">
-<p>While we encourage participants to attempt the use of their blackout
-solutions during main competition to help deal with noise and dropouts
-in the global vision system, we recognize that integration into the
-main competition robots is a difficult task. For these reasons, the
-hardware restrictions are relaxed for this technical challenge.</p>
+<p>Since this challenge must be done remotely, each team is responsible to issue
+the <strong>AutoPlacement commands</strong>. This can be easily achieved by using the SSL Game
+Controller (GC) with a connected AutoRef. The command can be issued using the
+"<strong>Place Ball</strong>" button, located at the bottom left side of the GC GUI.</p>
 </div>
 <div class="paragraph">
-<p>Teams may still remotely control their robots during normal
-competition, however, we encourage teams to experiment with onboard
-processing and autonomy. Regardless of where the control software
-executes, team will not receive data from the SSL vision
-software. Teams will still receive start, stop, and halt ref commands
-which will be used to initiate and stop trials of each stage.</p>
+<p>Also, teams should provide a video stream along with the screen share of the
+GC, which prints the placement timings. In case of any technical issues, the
+logs of the challenge must be recorded through the SSL Log tools and sent to
+the TC.</p>
 </div>
 <div class="paragraph">
-<p>All robot hardware requirements apply to this challenge <strong>EXCEPT</strong> the height
-restrictions and the pattern markings. Participant robots may be taller than the
-rules dictate. The vision pattern on-top of the robot <strong>MUST</strong> be covered or
-removed to guarantee that ssl-vision is not being utilized. However, other rules
-such as maximum speed, kick power, ball manipulation strategies, etc. must still
-be observed.</p>
+<p>The AutoPlacement command includes a <strong>game state</strong>, which can be <strong>BallPlacementYellow</strong>
+or <strong>BallPlacementBlue</strong>, and the requested ball position.  Before and after
+those commands the game is in Stop state, therefore, the robots are allowed to
+position themselves wherever they want before the placement starts, while
+following all Stop state rules.</p>
 </div>
 <div class="paragraph">
-<p>There are no restrictions on onboard sensor types. External sensors
-not attached to the robot are not allowed for this competition. We
-encourage teams to be creative in their choice of sensors and their
-strategies for completing each stage of the challenge. There is no
-restriction on processing power or where the processing takes
-place. However, keep in mind that bandwidth at competition is limited,
-so solutions requiring streaming large amounts of data wirelessly will
-likely not work.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_field_setup">2.2. Field Setup</h3>
-<div class="paragraph">
-<p>The technical challenge has the same requirements for the remote field as the
-2021 hardware challenges. The field must be 4x3m or larger. The field will need
-to have a goal of 0.7m wide, just as in the hardware challenges. The field will
-need to have a penalty area of 0.8x2m in size just as in the hardware
-challenges. Additionally participants will require a golf ball and an additional
-robot that can act as a static defender for stage 3.</p>
+<p>When the robots are done positioning, the AutoPlacement command will be issued
+and the rules for this state can be found in the
+<a href="https://robocup-ssl.github.io/ssl-rules/sslrules.html#_ball_placement">rule book</a>.</p>
 </div>
 <div class="paragraph">
-<p>Participants should <strong>NOT</strong> modify the goal or field to aid in navigation or
-recognition of objects. This includes things like visual fiduciary markers, IR
-reflectors, non-standard color splotches, etc. Teams should strive to have as
-close to a regulation Division B field as possible. The TC members reserve the
-right to ask teams to sweep the camera to show that additional markers have not
-been added off-frame and may require certain objects/signs/etc. to be covered up
-or removed during the runs.</p>
+<p>The starting and desired positions of the ball will be sent to the teams prior
+to the challenge.</p>
 </div>
+<div class="paragraph">
+<p>Teams are allowed to use up to 6 robots.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_competition_procedure">3. Competition Procedure</h2>
+<h2 id="_evaluation">3. Evaluation</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Each stage will consist of 3 independent trial runs by each
-participant. This is to account for any random effects as well as to
-allow participants to adjust in-between their trials. Scoring will be
-based on overall performance among the trials for each stage, so it is
-important for teams to perform consistently well.</p>
+<p>Every team places the ball in the same situations. The number and kind of
+situations will be determined by the TC.</p>
 </div>
 <div class="paragraph">
-<p>While the particular starting configurations of the ball and the robot will be
-different between stages and trial to trial, the TC member running the
-competition stage will strive to make the starting conditions similar between
-each participant for that trial run. This is further complicated by each team
-having a remote setup. The TC running the competition will pre-determine
-starting positions of ball, robot and static defender for each independent trial
-ahead of the competition. These positions will be specified relative to the
-common landmark of the goal. The TC will send/show a diagram with these
-positions to the team during their assigned technical challenge slot and ensure
-that the robot, ball and static defender are at the approximate positions before
-the run begins.</p>
+<p>A point will be awarded for every successfully placed ball. In case of ties,
+the team that was capable of placing the balls in the least amount of time
+wins.</p>
 </div>
 <div class="paragraph">
-<p>Each participating team will have a slot assigned to them to complete the
-challenge. The trials will be done live on video, just like the hardware
-challenges teams need to provide a camera that covers the whole field.
-Participants will do each stage and every trial back-to-back during their
-assigned time. Teams will have a maximum of 2 hours from the start of their slot
-to complete all of the trials under the supervision of the TC. Once the two
-hours are finished, any unfinished trials or stages will receive a score of
-zero. If teams have technical issues, they can resolve them in between trials,
-keeping in mind the overall time that all trials must be completed in.</p>
-</div>
-<div class="paragraph">
-<p>Challenges will be executed on a field of at least 4x3m with a goal size of
-0.7m. See the hardware section for more details on the field setup.</p>
-</div>
-<div class="paragraph">
-<p>Each run will start with a halt command. Just before the start, a stop command
-will be given, but the robot should not move during the stop command. This is
-just to allow teams a few seconds to initialize any internal state. The run will
-officially start when a force start command is sent. This will start the timer
-and at this point the robot may begin moving.</p>
-</div>
-<div class="sect2">
-<h3 id="_stage_1_grab_a_stationary_ball">3.1. Stage 1: Grab a Stationary Ball</h3>
-<div class="paragraph">
-<p>This stage is designed to be the easiest and demonstrate basic sensing
-and control capabilities. The robot will need to detect a ball on the
-field, navigate to it, and place it on its dribbler. Partial points
-will be awarded, and time will be used for tie-breaking.</p>
-</div>
-<div class="paragraph">
-<p>For each trial a random robot starting location/orientation and a random ball
-starting position will have been pre-generated by the TC. Just before the trial
-the TC will show the participant a diagram for the starting configuration and
-the participant will configure the field as specified. Both the robot and the
-ball will start stationary. There are no restrictions on the starting
-configuration other than that both robot and ball will be somewhere on the
-field.</p>
-</div>
-<div class="paragraph">
-<p>Before each run the robot will begin in the halt state. A stop command
-will be issued to ready the robot, but the robot should not yet
-move. The run begins with a force start command at which point the
-timer starts and the robot may attempt to complete the task.</p>
-</div>
-<div class="paragraph">
-<p>The robot may move anywhere on the field within the walls. The ball
-may similarly move anywhere on the field throughout the time. Each
-trial will last a maximum of one minute.</p>
-</div>
-<div class="sect3">
-<h4 id="_scoring">3.1.1. Scoring</h4>
-<div class="ulist">
-<ul>
-<li>
-<p>Touching the ball with any part of the robot&#8201;&#8212;&#8201;+1</p>
-</li>
-<li>
-<p>Touching the ball with the dribbler&#8201;&#8212;&#8201;+1</p>
-</li>
-<li>
-<p>Robot stopped with ball touching dribbler at the end of the run :: +1</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>In the event of a tie between participants for this trial shorter
-times will be used to determine ordering.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_differences_to_2019_ssl_vision_blackout_challenge">3.1.2. Differences to 2019 SSL Vision Blackout Challenge</h4>
-<div class="paragraph">
-<p>Unlike the 2019 challenge, there are no restrictions placed on the
-relative distances of the robot&#8217;s start configuration and the
-ball. The total time to complete each trial has also been
-increased. Finally, the ball and robot may go out of bounds on the
-field without ending the trial.</p>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_stage_2_scoring_on_an_empty_goal">3.2. Stage 2: Scoring on an Empty Goal</h3>
-<div class="paragraph">
-<p>This stage is designed to build on stage 1, requiring that participant
-robot&#8217;s can also detect/localize on a goal without the SSL vision
-software. Like stage 1, the robot will need to detect a ball, move to
-it and manipulate it. The robot must put the ball into the goal to
-receive maximum points in the trial.</p>
-</div>
-<div class="paragraph">
-<p>The robot and ball will start the same as in Stage 1. The TC will have
-pre-generated starting positions for this stage and just before each trial show
-the starting configuration diagram to the participant. The participants will
-attempt to replicate this starting configuration on their field setup. In this
-stage, the goal is for the robot to score on an empty goal. If the team has
-multiple goals on their field, only the goal used for the initial configuration
-reference point will count as scoring. While scoring the robot may not enter
-the defense zone. Unlike regular gameplay the ball does not need to stay on the
-ground in order for the goal to be counted.</p>
-</div>
-<div class="paragraph">
-<p>Before each run the robot will begin in the halt state. A stop command
-will be issued to ready the robot, but the robot should not yet
-move. The run begins with a force start command at which point the
-timer starts and the robot may attempt to complete the task. Each
-trial will last a maximum of one minute. The trial will stop when the
-goal has occurred or time has elapsed.</p>
-</div>
-<div class="sect3">
-<h4 id="_scoring_2">3.2.1. Scoring</h4>
-<div class="ulist">
-<ul>
-<li>
-<p>Touching the ball with any part of the robot&#8201;&#8212;&#8201;+1</p>
-</li>
-<li>
-<p>Touching the ball with the dribbler&#8201;&#8212;&#8201;+1</p>
-</li>
-<li>
-<p>Ball entered defense zone&#8201;&#8212;&#8201;+1</p>
-</li>
-<li>
-<p>Ball entered goal&#8201;&#8212;&#8201;+1</p>
-</li>
-<li>
-<p>Robot entered defense zone&#8201;&#8212;&#8201;-1</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_stage_3_scoring_on_a_statically_defended_goal">3.3. Stage 3: Scoring on a Statically Defended Goal</h3>
-<div class="paragraph">
-<p>This stage is a more complex version of stage 2. The goal is the same,
-but now there will be a static obstacle placed somewhere inside the
-defense zone. Unlike stage 2, a specific goal will be designated so
-that robots can attempt to score on the statically defended goal.</p>
-</div>
-<div class="paragraph">
-<p>The obstacle will be another robot provided by the participating team. The goal
-is to be able to use local sensing to detect opponent robots in a game like
-scenario.</p>
-</div>
-<div class="paragraph">
-<p>The robot and ball will start the same as in Stage 1 and Stage
-2. Unlike Stage 2, robots must only score in the designated goal. The target
-goal will be on the same half that the robot starts on. While scoring the robot
-may not enter the defense zone. This time the ball must enter the goal via a
-flat kick to prevent kicking over the obstacle. Just as in the previous stages
-the TC will have pre-generated starting configurations. These configurations
-will be given to the team just before starting the trial so that the team can
-configure their field to match as closely as possible.</p>
-</div>
-<div class="sect3">
-<h4 id="_scoring_3">3.3.1. Scoring</h4>
-<div class="ulist">
-<ul>
-<li>
-<p>Touching the ball with any part of the robot&#8201;&#8212;&#8201;+1</p>
-</li>
-<li>
-<p>Touching the ball with the dribbler&#8201;&#8212;&#8201;+1</p>
-</li>
-<li>
-<p>Ball entered defense zone&#8201;&#8212;&#8201;+1</p>
-</li>
-<li>
-<p>Ball entered goal&#8201;&#8212;&#8201;+1</p>
-</li>
-<li>
-<p>Robot entered defense zone&#8201;&#8212;&#8201;-1</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_overall_scoring">4. Overall Scoring</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>As each stage is quite different in terms of scoring, in order to
-determine an overall winner, each stage will be ranked individually by
-total score. Depending on ranking in the category, each participant
-will get an amount of overall points. The amount of points is equal to
-the number of participants - placement in that stage. For example,
-with 7 participants, first place gets 6 points, second place gets 5,
-etc.</p>
-</div>
-<div class="paragraph">
-<p>Each of the stage points will then be totaled to determine an overall
-winner. Therefore, performance in all stages is considered equal in
-the final scoring.</p>
-</div>
-<div class="paragraph">
-<p>In the event of a tie, the team with the lowest total time across all
-the stages will win.</p>
+<p>The TC reserves the right to change the evaluation procedure.</p>
 </div>
 </div>
 </div>
