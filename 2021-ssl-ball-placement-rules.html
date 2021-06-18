@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 2.0.12">
-<meta name="author" content="2021-04-29">
+<meta name="generator" content="Asciidoctor 2.0.15">
+<meta name="author" content="2021-06-18">
 <title>RoboCup 2021 SSL Ball Placement Technical Challenge Rules</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
@@ -95,9 +95,6 @@ dl dd{margin-bottom:1.25em}
 abbr,acronym{text-transform:uppercase;font-size:90%;color:rgba(0,0,0,.8);border-bottom:1px dotted #ddd;cursor:help}
 abbr{text-transform:none}
 blockquote{margin:0 0 1.25em;padding:.5625em 1.25em 0 1.1875em;border-left:1px solid #ddd}
-blockquote cite{display:block;font-size:.9375em;color:rgba(0,0,0,.6)}
-blockquote cite::before{content:"\2014 \0020"}
-blockquote cite a,blockquote cite a:visited{color:rgba(0,0,0,.6)}
 blockquote,blockquote p{line-height:1.6;color:rgba(0,0,0,.85)}
 @media screen and (min-width:768px){h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2}
 h1{font-size:2.75em}
@@ -262,7 +259,7 @@ pre.pygments .lineno::before{content:"";margin-right:-.125em}
 .quoteblock.excerpt>blockquote,.quoteblock .quoteblock{padding:0 0 .25em 1em;border-left:.25em solid #dddddf}
 .quoteblock.excerpt,.quoteblock .quoteblock{margin-left:0}
 .quoteblock.excerpt blockquote,.quoteblock.excerpt p,.quoteblock .quoteblock blockquote,.quoteblock .quoteblock p{color:inherit;font-size:1.0625rem}
-.quoteblock.excerpt .attribution,.quoteblock .quoteblock .attribution{color:inherit;text-align:left;margin-right:0}
+.quoteblock.excerpt .attribution,.quoteblock .quoteblock .attribution{color:inherit;font-size:.85rem;text-align:left;margin-right:0}
 p.tableblock:last-child{margin-bottom:0}
 td.tableblock>.content{margin-bottom:1.25em;word-wrap:anywhere}
 td.tableblock>.content>:last-child{margin-bottom:-1.25em}
@@ -443,7 +440,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="header">
 <h1>RoboCup 2021 SSL Ball Placement Technical Challenge Rules</h1>
 <div class="details">
-<span id="author" class="author">2021-04-29</span><br>
+<span id="author" class="author">2021-06-18</span><br>
 </div>
 <div id="toc" class="toc">
 <div id="toctitle">Table of Contents</div>
@@ -504,35 +501,75 @@ contact the TC/OC.</p>
 <h2 id="_procedure">2. Procedure</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Since this challenge must be done remotely, each team is responsible to issue
-the <strong>AutoPlacement commands</strong>. This can be easily achieved by using the SSL Game
-Controller (GC) with a connected AutoRef. The command can be issued using the
-"<strong>Place Ball</strong>" button, located at the bottom left side of the GC GUI.</p>
+<p>Similarly to the hardware challenges, the Ball Placement Technical Challenge
+will also be executed using the
+<a href="https://github.com/RoboCup-SSL/ssl-hardware-challenge-tool">SSL Hardware Challenge Tool</a>.
+This challenge is the number <strong>5</strong> in the tool. Therefore, the procedure is as
+follows:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The Game Controller, SSL Vision and at least one Auto Referee must be already
+running</p>
+</li>
+<li>
+<p>The <strong>SSL Hardware Challenge Tool</strong> must be executed with the corresponding
+json file and challenge number (<strong>5</strong>)</p>
+</li>
+<li>
+<p>The ball must be placed in the indicated position</p>
+</li>
+<li>
+<p>The robot(s) must be placed on the middle line of the field</p>
+</li>
+<li>
+<p>When all positions are correct, the challenge will start when the user
+presses <strong>Enter</strong></p>
+</li>
+<li>
+<p>A <strong>Stop</strong> command will be issued for <strong>2 seconds</strong></p>
+</li>
+<li>
+<p>Then, the <strong>AutoPlacement</strong> command will be issued</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p>Also, teams should provide a video stream along with the screen share of the
-GC, which prints the placement timings. In case of any technical issues, the
-logs of the challenge must be recorded through the SSL Log tools and sent to
-the TC.</p>
-</div>
-<div class="paragraph">
-<p>The AutoPlacement command includes a <strong>game state</strong>, which can be <strong>BallPlacementYellow</strong>
-or <strong>BallPlacementBlue</strong>, and the requested ball position.  Before and after
-those commands the game is in Stop state, therefore, the robots are allowed to
+<p>The AutoPlacement command includes a <strong>game state</strong>, which will be
+<strong>BallPlacementBlue</strong>, and the requested ball position. Before and after those
+commands the game is in Stop state, therefore, the robots are allowed to
 position themselves wherever they want before the placement starts, while
 following all Stop state rules.</p>
 </div>
 <div class="paragraph">
-<p>When the robots are done positioning, the AutoPlacement command will be issued
-and the rules for this state can be found in the
-<a href="https://robocup-ssl.github.io/ssl-rules/sslrules.html#_ball_placement">rule book</a>.</p>
+<p>The rules for the AutoPlacement can be found in the
+<a href="https://robocup-ssl.github.io/ssl-rules/sslrules.html#_ball_placement">rule book</a>.
+Teams should provide a video stream along with the screen share of the GC,
+which prints the placement timings. The logs of the challenge can also be
+recorded through the SSL Log tools and sent to the TC, in case of any technical
+issues.</p>
+</div>
+<div class="paragraph">
+<p>Teams should provide a video stream along with the screen share of the GC,
+which prints the placement timings. The logs of the challenge can also be
+recorded through the SSL Log tools and sent to the TC, in case of any technical
+issues.</p>
 </div>
 <div class="paragraph">
 <p>The starting and desired positions of the ball will be sent to the teams prior
-to the challenge.</p>
+to the challenge. The positions are formated in a json file similar to the
+hardware challenges, an example can be seen below:</p>
 </div>
 <div class="paragraph">
-<p>Teams are allowed to use up to 6 robots.</p>
+<p><a href="ball_placement_scenarios/example.json" class="bare">ball_placement_scenarios/example.json</a></p>
+</div>
+<div class="paragraph">
+<p>The first object is the starting position, and the second is the position where
+the ball must be placed.</p>
+</div>
+<div class="paragraph">
+<p><strong>Teams are allowed to use up to 6 robots</strong>.</p>
 </div>
 </div>
 </div>
@@ -540,8 +577,11 @@ to the challenge.</p>
 <h2 id="_evaluation">3. Evaluation</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Every team places the ball in the same situations. The number and kind of
-situations will be determined by the TC.</p>
+<p>Every team places the ball in the same situations.</p>
+</div>
+<div class="paragraph">
+<p>In total, there will be <strong>8 scenarios</strong> in this challenge. The order of the
+scenarios will be chosen randomly, just like the hardware challenges.</p>
 </div>
 <div class="paragraph">
 <p>A point will be awarded for every successfully placed ball. In case of ties,
@@ -556,7 +596,7 @@ wins.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2021-04-29 14:55:29 UTC
+Last updated 2021-06-18 03:56:21 UTC
 </div>
 </div>
 </body>
