@@ -81,7 +81,7 @@ can be edited to match this criteria.
 
 == Evaluation
 
-Every team places the ball in the same scenarios, and there are 3 tries per
+Every team places the ball in the same scenarios, and there are 2 tries per
 scenario.
 
 In total, there will be *8 scenarios* in this challenge. The order of the
@@ -89,8 +89,21 @@ scenarios will be chosen randomly, just like the hardware challenges.
 
 === Scoring
 
+For every scenario, the following criterias will be evaluated.
+
 * Touching the ball with any part of the robot --  +1
-* Touching the
+* Touching the ball with the dribbler -- +1
+* Moving the ball more than 1 meter away from the starting position -- +1
+* Completing the ball placement -- +1
+* Completing the ball placement in less than 30 seconds -- +1
+
+For the scenarios 6, 7 and 8, there will a additional criteria for taking the ball from the boundary.
+
+* Taking the ball out from the boundary -- +1
+
+The points will be counted one time per scenario. For example, if the robot touches the ball both tries, only 1 point will be given for the team in this scenario.
+
+The partial points of each scenario will be summed. In case of ties, the team that was capable of placing the balls in the least amount of time wins.
 
 The TC reserves the right to change the evaluation procedure.
 
