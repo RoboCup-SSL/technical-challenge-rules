@@ -39,7 +39,7 @@ follows:
   running
 * Make sure the game state is First Half or Second Half
 * The desired position must be set in Game Controller
-* The ball must be placed in the indicated position
+* The ball must be placed at the indicated position
 * The robot(s) must be placed on the middle line of the field
 * When all positions are correct, the challenge will start
 * A *Stop* command will be issued for *2 seconds*
