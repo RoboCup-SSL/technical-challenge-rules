@@ -1,13 +1,9 @@
-language: python
+language: minimal
 os: linux
 dist: focal
 
 services:
   - docker
-
-before_install:
-  - mkdir -p output
-  - docker pull asciidoctor/docker-asciidoctor
 
 stages:
   - name: build
