@@ -38,7 +38,7 @@ follows:
 * The Game Controller, SSL Vision and at least one Auto Referee must be already
   running
 * Make sure the game state is First Half or Second Half
-* The desired position must be setted in Game Controller
+* The desired position must be set in Game Controller
 * The ball must be placed in the indicated position
 * The robot(s) must be placed on the middle line of the field
 * When all positions are correct, the challenge will start
