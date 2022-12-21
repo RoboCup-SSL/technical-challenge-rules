@@ -1,5 +1,3 @@
-if: branch = master
-
 language: python
 os: linux
 dist: focal
