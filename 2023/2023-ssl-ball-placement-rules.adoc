@@ -65,7 +65,7 @@ the robot cannot get between the ball and the wall.
 
 == Evaluation
 
-Every team places the ball in the same scenarios and has 30 minutes for complete the scenarios. The 30 minutes considers the time for complete the challenges and the time for setup the scenarios, like positioning the ball each try. There are no restrictions about the quantity of tries per scenario, since each team has your strategy to complete the challenge within the time.
+Every team places the ball in the same scenarios and has 30 minutes to complete all scenarios. The 30 minutes considers the time for completing the challenges and the time for setting up the scenarios, like positioning the ball each try. There are no restrictions on the quantity of tries per scenario, since each team has your strategy to complete the challenge within the time.
 
 In total, there will be *8 scenarios* in this challenge. The order of the
 scenarios will be chosen by the team before the challenge begins, communicating the order for the TC.
