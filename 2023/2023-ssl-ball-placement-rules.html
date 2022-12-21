@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.16">
-<meta name="author" content="2022-12-13">
+<meta name="author" content="2022-12-21">
 <title>RoboCup 2022 SSL Ball Placement Technical Challenge Rules</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
@@ -443,7 +443,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="header">
 <h1>RoboCup 2022 SSL Ball Placement Technical Challenge Rules</h1>
 <div class="details">
-<span id="author" class="author">2022-12-13</span><br>
+<span id="author" class="author">2022-12-21</span><br>
 </div>
 <div id="toc" class="toc">
 <div id="toctitle">Table of Contents</div>
@@ -508,11 +508,6 @@ autonomously place the ball using the robots ("<strong>AutoPlacement</strong>").
 <div class="paragraph">
 <p>All Division B teams are eligible and <strong>must</strong> participate in this challenge.</p>
 </div>
-<div class="paragraph">
-<p>Also, this challenge must be performed with <strong>real robots</strong>, i.e., not using the
-simulator. In case of any problems regarding access to your labs, please
-contact the TC/OC.</p>
-</div>
 </div>
 </div>
 </div>
@@ -520,10 +515,7 @@ contact the TC/OC.</p>
 <h2 id="_procedure">Procedure</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Similarly to the hardware challenges, the Ball Placement Technical Challenge
-will also be executed using the
-<a href="https://github.com/RoboCup-SSL/ssl-hardware-challenge-tool">SSL Hardware Challenge Tool</a>.
-This challenge is the number <strong>5</strong> in the tool. Therefore, the procedure is as
+<p>The Ball Placement Technical Challenge will be executed using the Game Controller manual controls. Therefore, the procedure is as
 follows:</p>
 </div>
 <div class="ulist">
@@ -536,8 +528,7 @@ running</p>
 <p>Make sure the game state is First Half or Second Half</p>
 </li>
 <li>
-<p>The <strong>SSL Hardware Challenge Tool</strong> must be executed with the corresponding
-json file and challenge number (<strong>5</strong>)</p>
+<p>The desired position must be setted in Game Controller</p>
 </li>
 <li>
 <p>The ball must be placed in the indicated position</p>
@@ -546,8 +537,7 @@ json file and challenge number (<strong>5</strong>)</p>
 <p>The robot(s) must be placed on the middle line of the field</p>
 </li>
 <li>
-<p>When all positions are correct, the challenge will start when the user
-presses <strong>Enter</strong></p>
+<p>When all positions are correct, the challenge will start</p>
 </li>
 <li>
 <p>A <strong>Stop</strong> command will be issued for <strong>2 seconds</strong></p>
@@ -566,23 +556,16 @@ following all Stop state rules.</p>
 </div>
 <div class="paragraph">
 <p>The rules for the AutoPlacement can be found in the
-<a href="https://robocup-ssl.github.io/ssl-rules/sslrules.html#_ball_placement">rule book</a>.
-Teams should provide a video stream along with the screen share of the GC,
-which prints the placement timings. The logs of the challenge can also be
-recorded through the SSL Log tools and sent to the TC, in case of any technical
-issues.</p>
+<a href="https://robocup-ssl.github.io/ssl-rules/sslrules.html#_ball_placement">rule book</a>.</p>
 </div>
 <div class="paragraph">
 <p>The starting and desired positions of the ball can be seen in the Appendix at
-the end of the document. The positions are formated in a json file similar to
-the hardware challenges.  The "ball" is the starting position, and the
-"ball_placement" is the position where the ball must be placed.</p>
+the end of the document. The "Start" is the starting position, and the
+"Goal" is the position where the ball must be placed.</p>
 </div>
 <div class="paragraph">
 <p>In scenarios 6 and 7, the ball must be placed with an <strong>Y</strong> value, such that
-the robot cannot get between the ball and the wall. Since teams might have
-different extra space between the field boundaries and the wall, the json file
-can be edited to match this criteria.</p>
+the robot cannot get between the ball and the wall.</p>
 </div>
 <div class="paragraph">
 <p><strong>Teams are allowed to use up to 6 robots</strong>.</p>
@@ -593,12 +576,11 @@ can be edited to match this criteria.</p>
 <h2 id="_evaluation">Evaluation</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Every team places the ball in the same scenarios, and there are 2 tries per
-scenario.</p>
+<p>Every team places the ball in the same scenarios and has 30 minutes for complete the scenarios. The 30 minutes considers the time for complete the challenges and the time for setup the scenarios, like positioning the ball each try. There are no restrictions about the quantity of tries per scenario, since each team has your strategy to complete the challenge within the time.</p>
 </div>
 <div class="paragraph">
 <p>In total, there will be <strong>8 scenarios</strong> in this challenge. The order of the
-scenarios will be chosen randomly, just like the hardware challenges.</p>
+scenarios will be chosen by the team before the challenge begins, communicating the order for the TC.</p>
 </div>
 <div class="sect2">
 <h3 id="_scoring">Scoring</h3>
@@ -607,9 +589,6 @@ scenarios will be chosen randomly, just like the hardware challenges.</p>
 </div>
 <div class="ulist">
 <ul>
-<li>
-<p>Touching the ball with any part of the robot&#8201;&#8212;&#8201; +1</p>
-</li>
 <li>
 <p>Touching the ball with the dribbler&#8201;&#8212;&#8201;+1</p>
 </li>
@@ -621,6 +600,9 @@ scenarios will be chosen randomly, just like the hardware challenges.</p>
 </li>
 <li>
 <p>Completing the ball placement in less than 30 seconds&#8201;&#8212;&#8201;+1</p>
+</li>
+<li>
+<p>The ball, when the challenge is finished, is less than 1 meter away from the desired position&#8201;&#8212;&#8201;+1</p>
 </li>
 </ul>
 </div>
@@ -635,10 +617,10 @@ scenarios will be chosen randomly, just like the hardware challenges.</p>
 </ul>
 </div>
 <div class="paragraph">
-<p>The points will be counted one time per scenario. For example, if the robot touches the ball both tries, only 1 point will be given for the team in this scenario.</p>
+<p>The points will be counted one time per scenario. For example, if the robot touches the ball with the dribbler both tries, only 1 point will be given for the team in this scenario.</p>
 </div>
 <div class="paragraph">
-<p>The partial points of each scenario will be summed. In case of ties, the team that was capable of placing the balls in the least amount of time wins.</p>
+<p>The partial points of each scenario will be summed. In case of ties, the team that was capable of placing the balls in the least amount of tries wins.</p>
 </div>
 <div class="paragraph">
 <p>The TC reserves the right to change the evaluation procedure.</p>
@@ -878,7 +860,7 @@ scenarios will be chosen randomly, just like the hardware challenges.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2022-12-13 17:44:09 -0300
+Last updated 2022-12-21 11:26:21 -0300
 </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>

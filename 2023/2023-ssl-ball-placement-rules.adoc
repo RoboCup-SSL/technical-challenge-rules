@@ -30,27 +30,18 @@ autonomously place the ball using the robots ("*AutoPlacement*").
 
 All Division B teams are eligible and *must* participate in this challenge.
 
-Also, this challenge must be performed with *real robots*, i.e., not using the
-simulator. In case of any problems regarding access to your labs, please
-contact the TC/OC.
-
 == Procedure
 
-Similarly to the hardware challenges, the Ball Placement Technical Challenge
-will also be executed using the
-link:https://github.com/RoboCup-SSL/ssl-hardware-challenge-tool[SSL Hardware Challenge Tool].
-This challenge is the number *5* in the tool. Therefore, the procedure is as
+The Ball Placement Technical Challenge will be executed using the Game Controller manual controls. Therefore, the procedure is as
 follows:
 
 * The Game Controller, SSL Vision and at least one Auto Referee must be already
   running
 * Make sure the game state is First Half or Second Half
-* The *SSL Hardware Challenge Tool* must be executed with the corresponding
-  json file and challenge number (*5*)
+* The desired position must be setted in Game Controller
 * The ball must be placed in the indicated position
 * The robot(s) must be placed on the middle line of the field
-* When all positions are correct, the challenge will start when the user
-  presses *Enter*
+* When all positions are correct, the challenge will start
 * A *Stop* command will be issued for *2 seconds*
 * Then, the *AutoPlacement* command will be issued
 
@@ -62,48 +53,40 @@ following all Stop state rules.
 
 The rules for the AutoPlacement can be found in the
 link:https://robocup-ssl.github.io/ssl-rules/sslrules.html#_ball_placement[rule book].
-Teams should provide a video stream along with the screen share of the GC,
-which prints the placement timings. The logs of the challenge can also be
-recorded through the SSL Log tools and sent to the TC, in case of any technical
-issues.
 
 The starting and desired positions of the ball can be seen in the Appendix at
-the end of the document. The positions are formated in a json file similar to
-the hardware challenges.  The "ball" is the starting position, and the
-"ball_placement" is the position where the ball must be placed.
+the end of the document. The "Start" is the starting position, and the
+"Goal" is the position where the ball must be placed.
 
 In scenarios 6 and 7, the ball must be placed with an **Y** value, such that
-the robot cannot get between the ball and the wall. Since teams might have
-different extra space between the field boundaries and the wall, the json file
-can be edited to match this criteria.
+the robot cannot get between the ball and the wall.
 
 *Teams are allowed to use up to 6 robots*.
 
 == Evaluation
 
-Every team places the ball in the same scenarios, and there are 2 tries per
-scenario.
+Every team places the ball in the same scenarios and has 30 minutes for complete the scenarios. The 30 minutes considers the time for complete the challenges and the time for setup the scenarios, like positioning the ball each try. There are no restrictions about the quantity of tries per scenario, since each team has your strategy to complete the challenge within the time.
 
 In total, there will be *8 scenarios* in this challenge. The order of the
-scenarios will be chosen randomly, just like the hardware challenges.
+scenarios will be chosen by the team before the challenge begins, communicating the order for the TC.
 
 === Scoring
 
 For every scenario, the following criterias will be evaluated.
 
-* Touching the ball with any part of the robot --  +1
 * Touching the ball with the dribbler -- +1
 * Moving the ball more than 1 meter away from the starting position -- +1
 * Completing the ball placement -- +1
 * Completing the ball placement in less than 30 seconds -- +1
+* The ball, when the challenge is finished, is less than 1 meter away from the desired position -- +1
 
 For the scenarios 6, 7 and 8, there will a additional criteria for taking the ball from the boundary.
 
 * Taking the ball out from the boundary -- +1
 
-The points will be counted one time per scenario. For example, if the robot touches the ball both tries, only 1 point will be given for the team in this scenario.
+The points will be counted one time per scenario. For example, if the robot touches the ball with the dribbler both tries, only 1 point will be given for the team in this scenario.
 
-The partial points of each scenario will be summed. In case of ties, the team that was capable of placing the balls in the least amount of time wins.
+The partial points of each scenario will be summed. In case of ties, the team that was capable of placing the balls in the least amount of tries wins.
 
 The TC reserves the right to change the evaluation procedure.
 
