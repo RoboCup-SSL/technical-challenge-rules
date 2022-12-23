@@ -5,8 +5,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.16">
-<meta name="author" content="2022-12-21">
-<title>RoboCup 2022 SSL Ball Placement Technical Challenge Rules</title>
+<meta name="author" content="2022-12-22">
+<title>RoboCup 2023 SSL Ball Placement Technical Challenge Rules</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /*! Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
@@ -441,9 +441,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </head>
 <body class="article">
 <div id="header">
-<h1>RoboCup 2022 SSL Ball Placement Technical Challenge Rules</h1>
+<h1>RoboCup 2023 SSL Ball Placement Technical Challenge Rules</h1>
 <div class="details">
-<span id="author" class="author">2022-12-21</span><br>
+<span id="author" class="author">2022-12-22</span><br>
 </div>
 <div id="toc" class="toc">
 <div id="toctitle">Table of Contents</div>
@@ -506,7 +506,7 @@ autonomously place the ball using the robots ("<strong>AutoPlacement</strong>").
 <div class="sect2">
 <h3 id="_participation_requirements">Participation Requirements</h3>
 <div class="paragraph">
-<p>All Division B teams are eligible and <strong>must</strong> participate in this challenge.</p>
+<p>All Division B teams are eligible and <strong>are encouraged</strong> to participate in this challenge.</p>
 </div>
 </div>
 </div>
@@ -528,10 +528,10 @@ running</p>
 <p>Make sure the game state is First Half or Second Half</p>
 </li>
 <li>
-<p>The desired position must be setted in Game Controller</p>
+<p>The desired position must be set in Game Controller</p>
 </li>
 <li>
-<p>The ball must be placed in the indicated position</p>
+<p>The ball must be placed at the indicated position</p>
 </li>
 <li>
 <p>The robot(s) must be placed on the middle line of the field</p>
@@ -543,14 +543,12 @@ running</p>
 <p>A <strong>Stop</strong> command will be issued for <strong>2 seconds</strong></p>
 </li>
 <li>
-<p>Then, the <strong>AutoPlacement</strong> command will be issued</p>
+<p>Then, the <strong>BALL_PLACEMENT_BLUE/BALL_PLACEMENT_YELLOW</strong> command will be issued</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>The AutoPlacement command includes a <strong>game state</strong>, which will be
-<strong>BallPlacementBlue</strong>, and the requested ball position. Before and after those
-commands the game is in Stop state, therefore, the robots are allowed to
+<p>Before and after those commands the game is in Stop state, therefore, the robots are allowed to
 position themselves wherever they want before the placement starts, while
 following all Stop state rules.</p>
 </div>
@@ -564,8 +562,7 @@ the end of the document. The "Start" is the starting position, and the
 "Goal" is the position where the ball must be placed.</p>
 </div>
 <div class="paragraph">
-<p>In scenarios 6 and 7, the ball must be placed with an <strong>Y</strong> value, such that
-the robot cannot get between the ball and the wall.</p>
+<p>In scenarios 6 and 7, the ball must be placed with an <strong>Y</strong> value that the robot cannot get between the ball and the wall, since one of the goals of these scenarios is taking the ball from the boundary.</p>
 </div>
 <div class="paragraph">
 <p><strong>Teams are allowed to use up to 6 robots</strong>.</p>
@@ -576,11 +573,13 @@ the robot cannot get between the ball and the wall.</p>
 <h2 id="_evaluation">Evaluation</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Every team places the ball in the same scenarios and has 30 minutes for complete the scenarios. The 30 minutes considers the time for complete the challenges and the time for setup the scenarios, like positioning the ball each try. There are no restrictions about the quantity of tries per scenario, since each team has your strategy to complete the challenge within the time.</p>
+<p>Every team places the ball in the same scenarios and has 20 minutes to complete all scenarios. The 20 minutes considers the time for completing the challenges and the time for setting up the scenarios, like positioning the ball each try. There are no restrictions on the quantity of tries per scenario, since each team has your strategy to complete the challenge within the time.</p>
 </div>
 <div class="paragraph">
-<p>In total, there will be <strong>8 scenarios</strong> in this challenge. The order of the
-scenarios will be chosen by the team before the challenge begins, communicating the order for the TC.</p>
+<p>The team is responsible for moving the ball to the right place each try. The TC will only check if the positions are correct and will operate the Game Controller.</p>
+</div>
+<div class="paragraph">
+<p>In total, there will be <strong>8 scenarios</strong> in this challenge. The order of the scenarios will be chosen by the team during the challenge, communicating the next scenario for the TC.</p>
 </div>
 <div class="sect2">
 <h3 id="_scoring">Scoring</h3>
@@ -593,21 +592,21 @@ scenarios will be chosen by the team before the challenge begins, communicating 
 <p>Touching the ball with the dribbler&#8201;&#8212;&#8201;+1</p>
 </li>
 <li>
-<p>Moving the ball more than 1 meter away from the starting position&#8201;&#8212;&#8201;+1</p>
+<p>Moving the ball more than 0.5 meter away from the starting position&#8201;&#8212;&#8201;+1</p>
+</li>
+<li>
+<p>The ball, any time of the try, stopped less than 0.5 meter away from the desired position&#8201;&#8212;&#8201;+1</p>
+</li>
+<li>
+<p>The ball, when the try is finished, is less than 0.5 meter away from the desired position&#8201;&#8212;&#8201;+1</p>
 </li>
 <li>
 <p>Completing the ball placement&#8201;&#8212;&#8201;+1</p>
 </li>
-<li>
-<p>Completing the ball placement in less than 30 seconds&#8201;&#8212;&#8201;+1</p>
-</li>
-<li>
-<p>The ball, when the challenge is finished, is less than 1 meter away from the desired position&#8201;&#8212;&#8201;+1</p>
-</li>
 </ul>
 </div>
 <div class="paragraph">
-<p>For the scenarios 6, 7 and 8, there will a additional criteria for taking the ball from the boundary.</p>
+<p>For the scenarios 6, 7 and 8, there will an additional criteria for taking the ball from the boundary.</p>
 </div>
 <div class="ulist">
 <ul>
@@ -617,10 +616,10 @@ scenarios will be chosen by the team before the challenge begins, communicating 
 </ul>
 </div>
 <div class="paragraph">
-<p>The points will be counted one time per scenario. For example, if the robot touches the ball with the dribbler both tries, only 1 point will be given for the team in this scenario.</p>
+<p>The best try of each scenario will count.</p>
 </div>
 <div class="paragraph">
-<p>The partial points of each scenario will be summed. In case of ties, the team that was capable of placing the balls in the least amount of tries wins.</p>
+<p>The partial points of each scenario will be summed. In case of ties, the times for the best try of each scenario will be summed, the fastest team wins.</p>
 </div>
 <div class="paragraph">
 <p>The TC reserves the right to change the evaluation procedure.</p>
@@ -633,26 +632,6 @@ scenarios will be chosen by the team before the challenge begins, communicating 
 <div class="sectionbody">
 <div class="sect2">
 <h3 id="_scenario_1">Scenario 1</h3>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
-    "ball": {
-        "pos": [
-            -200,
-            -1800,
-            0
-        ]
-    },
-    "ball_placement": {
-        "pos": [
-            -200,
-            1800,
-            0
-        ]
-    }
-}</code></pre>
-</div>
-</div>
 <div class="imageblock">
 <div class="content">
 <object type="image/svg+xml" data="ball_placement_scenarios/scenario1.svg" width="700"><span class="alt">Interactive</span></object>
@@ -661,26 +640,6 @@ scenarios will be chosen by the team before the challenge begins, communicating 
 </div>
 <div class="sect2">
 <h3 id="_scenario_2">Scenario 2</h3>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
-    "ball": {
-        "pos": [
-            -2200,
-            -1500,
-            0
-        ]
-    },
-    "ball_placement": {
-        "pos": [
-            0,
-            0,
-            0
-        ]
-    }
-}</code></pre>
-</div>
-</div>
 <div class="imageblock">
 <div class="content">
 <object type="image/svg+xml" data="ball_placement_scenarios/scenario2.svg" width="700"><span class="alt">Interactive</span></object>
@@ -689,26 +648,6 @@ scenarios will be chosen by the team before the challenge begins, communicating 
 </div>
 <div class="sect2">
 <h3 id="_scenario_3">Scenario 3</h3>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
-    "ball": {
-        "pos": [
-            -1000,
-            -1500,
-            0
-        ]
-    },
-    "ball_placement": {
-        "pos": [
-            -200,
-            -1800,
-            0
-        ]
-    }
-}</code></pre>
-</div>
-</div>
 <div class="imageblock">
 <div class="content">
 <object type="image/svg+xml" data="ball_placement_scenarios/scenario3.svg" width="700"><span class="alt">Interactive</span></object>
@@ -717,26 +656,6 @@ scenarios will be chosen by the team before the challenge begins, communicating 
 </div>
 <div class="sect2">
 <h3 id="_scenario_4">Scenario 4</h3>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
-    "ball": {
-        "pos": [
-            -2900,
-            -1900,
-            0
-        ]
-    },
-    "ball_placement": {
-        "pos": [
-            -200,
-            1800,
-            0
-        ]
-    }
-}</code></pre>
-</div>
-</div>
 <div class="imageblock">
 <div class="content">
 <object type="image/svg+xml" data="ball_placement_scenarios/scenario4.svg" width="700"><span class="alt">Interactive</span></object>
@@ -745,26 +664,6 @@ scenarios will be chosen by the team before the challenge begins, communicating 
 </div>
 <div class="sect2">
 <h3 id="_scenario_5">Scenario 5</h3>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
-    "ball": {
-        "pos": [
-            -500,
-            0,
-            0
-        ]
-    },
-    "ball_placement": {
-        "pos": [
-            -2800,
-            1800,
-            0
-        ]
-    }
-}</code></pre>
-</div>
-</div>
 <div class="imageblock">
 <div class="content">
 <object type="image/svg+xml" data="ball_placement_scenarios/scenario5.svg" width="700"><span class="alt">Interactive</span></object>
@@ -773,26 +672,6 @@ scenarios will be chosen by the team before the challenge begins, communicating 
 </div>
 <div class="sect2">
 <h3 id="_scenario_6">Scenario 6</h3>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
-    "ball": {
-        "pos": [
-            -660,
-            -2140,
-            0
-        ]
-    },
-    "ball_placement": {
-        "pos": [
-            -2200,
-            -1800,
-            0
-        ]
-    }
-}</code></pre>
-</div>
-</div>
 <div class="imageblock">
 <div class="content">
 <object type="image/svg+xml" data="ball_placement_scenarios/scenario6.svg" width="700"><span class="alt">Interactive</span></object>
@@ -801,26 +680,6 @@ scenarios will be chosen by the team before the challenge begins, communicating 
 </div>
 <div class="sect2">
 <h3 id="_scenario_7">Scenario 7</h3>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
-    "ball": {
-        "pos": [
-            -660,
-            2140,
-            0
-        ]
-    },
-    "ball_placement": {
-        "pos": [
-            -2200,
-            1800,
-            0
-        ]
-    }
-}</code></pre>
-</div>
-</div>
 <div class="imageblock">
 <div class="content">
 <object type="image/svg+xml" data="ball_placement_scenarios/scenario7.svg" width="700"><span class="alt">Interactive</span></object>
@@ -829,26 +688,6 @@ scenarios will be chosen by the team before the challenge begins, communicating 
 </div>
 <div class="sect2">
 <h3 id="_scenario_8">Scenario 8</h3>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
-    "ball": {
-        "pos": [
-            -3050,
-            -100,
-            0
-        ]
-    },
-    "ball_placement": {
-        "pos": [
-            -500,
-            1800,
-            0
-        ]
-    }
-}</code></pre>
-</div>
-</div>
 <div class="imageblock">
 <div class="content">
 <object type="image/svg+xml" data="ball_placement_scenarios/scenario8.svg" width="700"><span class="alt">Interactive</span></object>
@@ -860,7 +699,7 @@ scenarios will be chosen by the team before the challenge begins, communicating 
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2022-12-21 11:26:21 -0300
+Last updated 2022-12-22 21:30:31 -0300
 </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>

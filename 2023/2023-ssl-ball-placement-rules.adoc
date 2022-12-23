@@ -1,6 +1,6 @@
 :source-highlighter: highlightjs
 
-= RoboCup 2022 SSL Ball Placement Technical Challenge Rules
+= RoboCup 2023 SSL Ball Placement Technical Challenge Rules
 {docdate}
 :toc:
 :sectnumlevels: 0
@@ -28,7 +28,7 @@ autonomously place the ball using the robots ("*AutoPlacement*").
 
 === Participation Requirements
 
-All Division B teams are eligible and *must* participate in this challenge.
+All Division B teams are eligible and *are encouraged* to participate in this challenge.
 
 == Procedure
 
@@ -43,11 +43,9 @@ follows:
 * The robot(s) must be placed on the middle line of the field
 * When all positions are correct, the challenge will start
 * A *Stop* command will be issued for *2 seconds*
-* Then, the *AutoPlacement* command will be issued
+* Then, the *BALL_PLACEMENT_BLUE/BALL_PLACEMENT_YELLOW* command will be issued
 
-The AutoPlacement command includes a *game state*, which will be
-*BallPlacementBlue*, and the requested ball position. Before and after those
-commands the game is in Stop state, therefore, the robots are allowed to
+Before and after those commands the game is in Stop state, therefore, the robots are allowed to
 position themselves wherever they want before the placement starts, while
 following all Stop state rules.
 
@@ -58,35 +56,35 @@ The starting and desired positions of the ball can be seen in the Appendix at
 the end of the document. The "Start" is the starting position, and the
 "Goal" is the position where the ball must be placed.
 
-In scenarios 6 and 7, the ball must be placed with an **Y** value, such that
-the robot cannot get between the ball and the wall.
+In scenarios 6 and 7, the ball must be placed with an **Y** value that the robot cannot get between the ball and the wall, since one of the goals of these scenarios is taking the ball from the boundary.
 
 *Teams are allowed to use up to 6 robots*.
 
 == Evaluation
 
-Every team places the ball in the same scenarios and has 30 minutes to complete all scenarios. The 30 minutes considers the time for completing the challenges and the time for setting up the scenarios, like positioning the ball each try. There are no restrictions on the quantity of tries per scenario, since each team has your strategy to complete the challenge within the time.
+Every team places the ball in the same scenarios and has 20 minutes to complete all scenarios. The 20 minutes considers the time for completing the challenges and the time for setting up the scenarios, like positioning the ball each try. There are no restrictions on the quantity of tries per scenario, since each team has your strategy to complete the challenge within the time. 
 
-In total, there will be *8 scenarios* in this challenge. The order of the
-scenarios will be chosen by the team before the challenge begins, communicating the order for the TC.
+The team is responsible for moving the ball to the right place each try. The TC will only check if the positions are correct and will operate the Game Controller.
+
+In total, there will be *8 scenarios* in this challenge. The order of the scenarios will be chosen by the team during the challenge, communicating the next scenario for the TC.
 
 === Scoring
 
 For every scenario, the following criterias will be evaluated.
 
 * Touching the ball with the dribbler -- +1
-* Moving the ball more than 1 meter away from the starting position -- +1
+* Moving the ball more than 0.5 meter away from the starting position -- +1
+* The ball, any time of the try, stopped less than 0.5 meter away from the desired position -- +1
+* The ball, when the try is finished, is less than 0.5 meter away from the desired position -- +1
 * Completing the ball placement -- +1
-* Completing the ball placement in less than 30 seconds -- +1
-* The ball, when the challenge is finished, is less than 1 meter away from the desired position -- +1
 
-For the scenarios 6, 7 and 8, there will a additional criteria for taking the ball from the boundary.
+For the scenarios 6, 7 and 8, there will an additional criteria for taking the ball from the boundary.
 
 * Taking the ball out from the boundary -- +1
 
-The points will be counted one time per scenario. For example, if the robot touches the ball with the dribbler both tries, only 1 point will be given for the team in this scenario.
+The best try of each scenario will count.
 
-The partial points of each scenario will be summed. In case of ties, the team that was capable of placing the balls in the least amount of tries wins.
+The partial points of each scenario will be summed. In case of ties, the times for the best try of each scenario will be summed, the fastest team wins.
 
 The TC reserves the right to change the evaluation procedure.
 
@@ -96,73 +94,33 @@ The TC reserves the right to change the evaluation procedure.
 
 === Scenario 1
 
-[source,json]
-----
-include::ball_placement_scenarios/bptcsc1.json[]
-----
-
 image::ball_placement_scenarios/scenario1.svg[Interactive,700,opts=interactive]
 
 === Scenario 2
-
-[source,json]
-----
-include::ball_placement_scenarios/bptcsc2.json[]
-----
 
 image::ball_placement_scenarios/scenario2.svg[Interactive,700,opts=interactive]
 
 === Scenario 3
 
-[source,json]
-----
-include::ball_placement_scenarios/bptcsc3.json[]
-----
-
 image::ball_placement_scenarios/scenario3.svg[Interactive,700,opts=interactive]
 
 === Scenario 4
-
-[source,json]
-----
-include::ball_placement_scenarios/bptcsc4.json[]
-----
 
 image::ball_placement_scenarios/scenario4.svg[Interactive,700,opts=interactive]
 
 === Scenario 5
 
-[source,json]
-----
-include::ball_placement_scenarios/bptcsc5.json[]
-----
-
 image::ball_placement_scenarios/scenario5.svg[Interactive,700,opts=interactive]
 
 === Scenario 6
-
-[source,json]
-----
-include::ball_placement_scenarios/bptcsc6.json[]
-----
 
 image::ball_placement_scenarios/scenario6.svg[Interactive,700,opts=interactive]
 
 === Scenario 7
 
-[source,json]
-----
-include::ball_placement_scenarios/bptcsc7.json[]
-----
-
 image::ball_placement_scenarios/scenario7.svg[Interactive,700,opts=interactive]
 
 === Scenario 8
-
-[source,json]
-----
-include::ball_placement_scenarios/bptcsc8.json[]
-----
 
 image::ball_placement_scenarios/scenario8.svg[Interactive,700,opts=interactive]
 

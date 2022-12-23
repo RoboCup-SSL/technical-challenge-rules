@@ -1,4 +1,4 @@
-# RoboCup 2022 SSL Technical Challenge Rules
+# RoboCup 2023 SSL Technical Challenge Rules
 
 ## Building
 
@@ -11,9 +11,9 @@ build HTML5 version with
 
 ```
 # Build the HTML5 version
-asciidoctor 2022-ssl-ball-placement-rules.adoc
+asciidoctor 2023-ssl-ball-placement-rules.adoc
 # Build the PDF version
-asciidoctor-pdf 2022-ssl-ball-placement-rules.adoc
+asciidoctor-pdf 2023-ssl-ball-placement-rules.adoc
 ```
 
 ### Using docker image
@@ -24,7 +24,7 @@ If you have Docker installed, you can use the official AsciiDoctor image:
 # Pull image once
 docker pull asciidoctor/docker-asciidoctor
 # Build the HTML5 version
-docker run -v $PWD:/documents/ asciidoctor/docker-asciidoctor asciidoctor 2022-ssl-ball-placement-rules.adoc
+docker run -v $PWD:/documents/ asciidoctor/docker-asciidoctor asciidoctor 2023-ssl-ball-placement-rules.adoc
 # Build the PDF version
-docker run -v $PWD:/documents/ asciidoctor/docker-asciidoctor asciidoctor-pdf 2022-ssl-ball-placement-rules.adoc
+docker run -v $PWD:/documents/ asciidoctor/docker-asciidoctor asciidoctor-pdf 2023-ssl-ball-placement-rules.adoc
 ```
