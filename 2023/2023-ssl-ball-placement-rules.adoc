@@ -22,7 +22,7 @@ females.
 == Goals of the Technical Challenge
 
 Given the goal of preparing Division B teams to participate in Division A, this
-technical challenge aims to incentive Division B teams to develop one of the
+technical challenge aims to encourage Division B teams to develop one of the
 skills needed to play a match in Division A. In this case, the challenge is to
 autonomously place the ball using the robots ("*AutoPlacement*").
 
@@ -62,7 +62,7 @@ In scenarios 6 and 7, the ball must be placed with an **Y** value that the robot
 
 == Evaluation
 
-Every team places the ball in the same scenarios and has 20 minutes to complete all scenarios. The 20 minutes considers the time for completing the challenges and the time for setting up the scenarios, like positioning the ball each try. There are no restrictions on the quantity of tries per scenario, since each team has your strategy to complete the challenge within the time. 
+Every team places the ball in the same scenarios and has 20 minutes to complete all scenarios. The 20 minutes considers the time for completing the challenges and the time for setting up the scenarios, like positioning the ball each try. There are no restrictions on the quantity of tries per scenario, so each team can choose their own strategy to complete the challenge within the time.
 
 The team is responsible for moving the ball to the right place each try. The TC will only check if the positions are correct and will operate the Game Controller.
 
@@ -70,7 +70,7 @@ In total, there will be *8 scenarios* in this challenge. The order of the scenar
 
 === Scoring
 
-For every scenario, the following criterias will be evaluated.
+For every scenario, the following criteria will be evaluated.
 
 * Touching the ball with the dribbler -- +1
 * Moving the ball more than 0.5 meter away from the starting position -- +1
@@ -78,7 +78,7 @@ For every scenario, the following criterias will be evaluated.
 * The ball, when the try is finished, is less than 0.5 meter away from the desired position -- +1
 * Completing the ball placement -- +1
 
-For the scenarios 6, 7 and 8, there will an additional criteria for taking the ball from the boundary.
+For the scenarios 6, 7 and 8, there will be an additional criteria for taking the ball from the boundary.
 
 * Taking the ball out from the boundary -- +1
 
