@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 2.0.17">
-<meta name="author" content="2022-06-15">
-<title>RoboCup 2022 SSL Vision Blackout Technical Challenge Rules</title>
+<meta name="generator" content="Asciidoctor 2.0.21">
+<meta name="author" content="2024-03-08">
+<title>RoboCup 2024 Team vs. Team Passing Challenge</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /*! Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
@@ -85,10 +85,10 @@ code{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;font-weight:400;
 ul,ol,dl{line-height:1.6;margin-bottom:1.25em;list-style-position:outside;font-family:inherit}
 ul,ol{margin-left:1.5em}
 ul li ul,ul li ol{margin-left:1.25em;margin-bottom:0}
-ul.square li ul,ul.circle li ul,ul.disc li ul{list-style:inherit}
-ul.square{list-style-type:square}
 ul.circle{list-style-type:circle}
 ul.disc{list-style-type:disc}
+ul.square{list-style-type:square}
+ul.circle ul:not([class]),ul.disc ul:not([class]),ul.square ul:not([class]){list-style:inherit}
 ol li ul,ol li ol{margin-left:1.25em;margin-bottom:0}
 dl dt{margin-bottom:.3125em;font-weight:bold}
 dl dd{margin-bottom:1.25em}
@@ -141,7 +141,7 @@ p a>code:hover{color:rgba(0,0,0,.9)}
 #content::before{content:none}
 #header>h1:first-child{color:rgba(0,0,0,.85);margin-top:2.25rem;margin-bottom:0}
 #header>h1:first-child+#toc{margin-top:8px;border-top:1px solid #dddddf}
-#header>h1:only-child,body.toc2 #header>h1:nth-last-child(2){border-bottom:1px solid #dddddf;padding-bottom:8px}
+#header>h1:only-child{border-bottom:1px solid #dddddf;padding-bottom:8px}
 #header .details{border-bottom:1px solid #dddddf;line-height:1.45;padding-top:.25em;padding-bottom:.25em;padding-left:.25em;color:rgba(0,0,0,.6);display:flex;flex-flow:row wrap}
 #header .details span:first-child{margin-left:-.125em}
 #header .details span.email a{color:rgba(0,0,0,.85)}
@@ -163,6 +163,7 @@ p a>code:hover{color:rgba(0,0,0,.9)}
 #toctitle{color:#7a2518;font-size:1.2em}
 @media screen and (min-width:768px){#toctitle{font-size:1.375em}
 body.toc2{padding-left:15em;padding-right:0}
+body.toc2 #header>h1:nth-last-child(2){border-bottom:1px solid #dddddf;padding-bottom:8px}
 #toc.toc2{margin-top:0!important;background:#f8f8f7;position:fixed;width:15em;left:0;top:0;border-right:1px solid #e7e7e9;border-top-width:0!important;border-bottom-width:0!important;z-index:1000;padding:1.25em 1em;height:100%;overflow:auto}
 #toc.toc2 #toctitle{margin-top:0;margin-bottom:.8rem;font-size:1.2em}
 #toc.toc2>ul{font-size:.9em;margin-bottom:0}
@@ -209,13 +210,10 @@ table.tableblock.fit-content>caption.title{white-space:nowrap;width:0}
 .admonitionblock>table td.content{padding-left:1.125em;padding-right:1.25em;border-left:1px solid #dddddf;color:rgba(0,0,0,.6);word-wrap:anywhere}
 .admonitionblock>table td.content>:last-child>:last-child{margin-bottom:0}
 .exampleblock>.content{border:1px solid #e6e6e6;margin-bottom:1.25em;padding:1.25em;background:#fff;border-radius:4px}
-.exampleblock>.content>:first-child{margin-top:0}
-.exampleblock>.content>:last-child{margin-bottom:0}
 .sidebarblock{border:1px solid #dbdbd6;margin-bottom:1.25em;padding:1.25em;background:#f3f3f2;border-radius:4px}
-.sidebarblock>:first-child{margin-top:0}
-.sidebarblock>:last-child{margin-bottom:0}
 .sidebarblock>.content>.title{color:#7a2518;margin-top:0;text-align:center}
-.exampleblock>.content>:last-child>:last-child,.exampleblock>.content .olist>ol>li:last-child>:last-child,.exampleblock>.content .ulist>ul>li:last-child>:last-child,.exampleblock>.content .qlist>ol>li:last-child>:last-child,.sidebarblock>.content>:last-child>:last-child,.sidebarblock>.content .olist>ol>li:last-child>:last-child,.sidebarblock>.content .ulist>ul>li:last-child>:last-child,.sidebarblock>.content .qlist>ol>li:last-child>:last-child{margin-bottom:0}
+.exampleblock>.content>:first-child,.sidebarblock>.content>:first-child{margin-top:0}
+.exampleblock>.content>:last-child,.exampleblock>.content>:last-child>:last-child,.exampleblock>.content .olist>ol>li:last-child>:last-child,.exampleblock>.content .ulist>ul>li:last-child>:last-child,.exampleblock>.content .qlist>ol>li:last-child>:last-child,.sidebarblock>.content>:last-child,.sidebarblock>.content>:last-child>:last-child,.sidebarblock>.content .olist>ol>li:last-child>:last-child,.sidebarblock>.content .ulist>ul>li:last-child>:last-child,.sidebarblock>.content .qlist>ol>li:last-child>:last-child{margin-bottom:0}
 .literalblock pre,.listingblock>.content>pre{border-radius:4px;overflow-x:auto;padding:1em;font-size:.8125em}
 @media screen and (min-width:768px){.literalblock pre,.listingblock>.content>pre{font-size:.90625em}}
 @media screen and (min-width:1280px){.literalblock pre,.listingblock>.content>pre{font-size:1em}}
@@ -331,7 +329,7 @@ a.image{text-decoration:none;display:inline-block}
 a.image object{pointer-events:none}
 sup.footnote,sup.footnoteref{font-size:.875em;position:static;vertical-align:super}
 sup.footnote a,sup.footnoteref a{text-decoration:none}
-sup.footnote a:active,sup.footnoteref a:active{text-decoration:underline}
+sup.footnote a:active,sup.footnoteref a:active,#footnotes .footnote a:first-of-type:active{text-decoration:underline}
 #footnotes{padding-top:.75em;padding-bottom:.75em;margin-bottom:.625em}
 #footnotes hr{width:20%;min-width:6.25em;margin:-.25em 0 .75em;border-width:1px 0 0}
 #footnotes .footnote{padding:0 .375em 0 .225em;line-height:1.3334;font-size:.875em;margin-left:1.2em;margin-bottom:.2em}
@@ -394,7 +392,7 @@ b.conum *{color:inherit!important}
 dt,th.tableblock,td.content,div.footnote{text-rendering:optimizeLegibility}
 h1,h2,p,td.content,span.alt,summary{letter-spacing:-.01em}
 p strong,td.content strong,div.footnote strong{letter-spacing:-.005em}
-p,blockquote,dt,td.content,span.alt,summary{font-size:1.0625rem}
+p,blockquote,dt,td.content,td.hdlist1,span.alt,summary{font-size:1.0625rem}
 p{margin-bottom:1.25rem}
 .sidebarblock p,.sidebarblock dt,.sidebarblock td.content,p.tableblock{font-size:1em}
 .exampleblock>.content{background:#fffef7;border-color:#e0e0dc;box-shadow:0 1px 4px #e0e0dc}
@@ -436,39 +434,29 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 #footer-text{color:rgba(0,0,0,.6);font-size:.9em}}
 @media amzn-kf8{#header,#content,#footnotes,#footer{padding:0}}
 </style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/styles/github.min.css">
 </head>
 <body class="article">
 <div id="header">
-<h1>RoboCup 2022 SSL Vision Blackout Technical Challenge Rules</h1>
+<h1>RoboCup 2024 Team vs. Team Passing Challenge</h1>
 <div class="details">
-<span id="author" class="author">2022-06-15</span><br>
+<span id="author" class="author">2024-03-08</span><br>
 </div>
 <div id="toc" class="toc">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#_goals_of_the_technical_challenge">Goals of the Technical Challenge</a>
+<li><a href="#_goal">Goal</a></li>
+<li><a href="#_procedure">Procedure</a>
 <ul class="sectlevel2">
-<li><a href="#_participation_requirements">Participation Requirements</a></li>
-<li><a href="#_overview_of_competition_stages">Overview of Competition Stages</a></li>
+<li><a href="#_special_rule_set_during_the_technical_challenge">Special Rule Set during the Technical Challenge</a></li>
+<li><a href="#_pass_definitions">Pass Definitions</a></li>
 </ul>
 </li>
-<li><a href="#_hardwaresoftware_requirements">Hardware/Software Requirements</a>
+<li><a href="#_scoring">Scoring</a>
 <ul class="sectlevel2">
-<li><a href="#_robot_hardware">Robot Hardware</a></li>
+<li><a href="#_evaluation">Evaluation</a></li>
 </ul>
 </li>
-<li><a href="#_competition_procedure">Competition Procedure</a>
-<ul class="sectlevel2">
-<li><a href="#_field_setup">Field setup</a></li>
-<li><a href="#_referee_commands">Referee commands</a></li>
-<li><a href="#_scoring">Scoring</a></li>
-<li><a href="#_stage_1_grab_a_stationary_ball">Stage 1: Grab a Stationary Ball</a></li>
-<li><a href="#_stage_2_scoring_on_an_empty_goal">Stage 2: Scoring on an Empty Goal</a></li>
-<li><a href="#_stage_3_moving_to_specific_coordinates">Stage 3: Moving to Specific Coordinates</a></li>
-<li><a href="#_stage_4_scoring_an_indirect_goal_without_obstacles">Stage 4: Scoring an Indirect Goal (without Obstacles)</a></li>
-</ul>
-</li>
-<li><a href="#_overall_scoring">Overall Scoring</a></li>
 </ul>
 </div>
 </div>
@@ -483,7 +471,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-References to the male gender in the rules with respect to referees, team members, officials, etc. are for simplification and apply to both males and females.
+References to the male gender in the rules with respect to referees, team
+members, officials, etc., are for simplification and apply to both males and
+females.
 </td>
 </tr>
 </table>
@@ -491,442 +481,197 @@ References to the male gender in the rules with respect to referees, team member
 </div>
 </div>
 <div class="sect1">
-<h2 id="_goals_of_the_technical_challenge">Goals of the Technical Challenge</h2>
+<h2 id="_goal">Goal</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The goal of this technical challenge is to incentivize teams to
-explore local sensing and processing rather than the typical SSL
-approach of an off-board computer and a global set of cameras sensing
-the environment. While the main league still uses the standard SSL
-vision software with overhead cameras, there is desire to reduce the
-reliance on this vision system. We believe that not only will more
-distributed sensing and processing on robots help advance research in
-this league, it will provide a benefit to teams who take this
-approach.</p>
+<p>A key distinguishing characteristic of the Small Size League is its tight integration of software and hardware, which is crucial to create a dynamic, collaborative soccer match.
+While this goal was pursued in last year&#8217;s SSL Chip Pass Challenge, the goal of this year&#8217;s challenge is to utilize last year&#8217;s work and adapt it to a more realistic situation.</p>
 </div>
 <div class="paragraph">
-<p>Overall, this technical challenge will focus on demonstrating standard
-SSL soccer skills (e.g. locomotion, ball manipulation and colaboration
-between robots) in without the ssl-vision software running. The challenge
-is split into multiple stages designed to have different levels of difficulty,
-with each stage building on the skills of the prior.</p>
+<p>Therefore this year two teams will try to play as many passes as possible while competing against each other. To achieve this, the ruleset used last year has been adapted to the new situation.</p>
+</div>
+<div class="paragraph">
+<p>Although the teams, which have participated in one of the previous passing challenges, might have a slight advantage, we would like to encourage all teams to participate in this technical challenge.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_procedure">Procedure</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To level the playing field and to remove the impact of the performance of the opponent team on a teams score, each team will play two games against different contestants of the technical challenge. To reduce the risk of biases the TC/OC will draw the pairings for each match by random and announce the pairings together with the schedule for the technical challenge.</p>
+</div>
+<div class="paragraph">
+<p>Each game will have the following procedure:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>To reduce the preparation time, the team colors for each team will be determined by the TC/OC and announced together with the schedule of the technical challenge.</p>
+</li>
+<li>
+<p>To start the game, a kick-off command for the yellow team will be issued from the game controller. For the start the robots can be positioned in any way preferred, as long as the positioning does not violate the usual ruleset for a kick-off.</p>
+</li>
+<li>
+<p>After <strong>2 minutes of game time</strong> a stop command will be issued and the first half of the game is over.</p>
+</li>
+<li>
+<p>The half time break for this challenge will be only 60 seconds, since it should be mainly used to set up the robots at their desired position again and to exchange faulty robots.</p>
+</li>
+<li>
+<p>To start the second half a kick-off command for the blue team will be issued.</p>
+</li>
+<li>
+<p>After another <strong>2 minutes of game time</strong> a stop command will be issued and the game is over.</p>
+</li>
+</ul>
 </div>
 <div class="sect2">
-<h3 id="_participation_requirements">Participation Requirements</h3>
+<h3 id="_special_rule_set_during_the_technical_challenge">Special Rule Set during the Technical Challenge</h3>
 <div class="paragraph">
-<p>Anyone participating in SSL RoboCup is eligible to participate in this
-challenge. Anyone participating must publish their approach to solving
-this technical challenege after the competition has concluded. The
-goal of forcing publication is that other participants in the league
-and the wider research community can learn and benefit from those that
-participated. Teams are also encouraged to present their approach in the
-poster sessions.</p>
+<p>For the technical challenge a Div B field will be used with a maximum of 4 robots per team. If the ball leaves the field via any of the field lines, the game will be stopped and the team that did not last touch the ball gets awarded a kick-off.</p>
+</div>
+<div class="paragraph">
+<p>During the games of the technical challenge <strong>only</strong> the following fouls from the ssl rulebook apply:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Pushing</p>
+</li>
+<li>
+<p>Ball Holding</p>
+</li>
+<li>
+<p>Tipping over or dropping parts</p>
+</li>
+<li>
+<p>Boundary Crossing</p>
+</li>
+<li>
+<p>Excessive Dribbling</p>
+</li>
+<li>
+<p>Ball Speed</p>
+</li>
+<li>
+<p>Crashing</p>
+</li>
+<li>
+<p>Defender too close to ball</p>
+</li>
+<li>
+<p>Robot Stop Speed</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>If there is no progress in the game for 10 seconds while both teams are allowed to manipulate the ball, the game is stopped and the team that got the first kick-off of this halftime will get a kick off.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_overview_of_competition_stages">Overview of Competition Stages</h3>
+<h3 id="_pass_definitions">Pass Definitions</h3>
 <div class="paragraph">
-<p>The competition will consist of four stages:</p>
+<p>Teams are free in how they perform the passes. Definitions of a pass in general and additional constraints needed for the scoring are given in this section.</p>
 </div>
-<div class="olist arabic">
-<ol class="arabic">
+<div class="paragraph">
+<p>A pass is defined as follows:</p>
+</div>
+<div class="ulist">
+<ul>
 <li>
-<p>Grab a stationary ball somewhere on the field</p>
+<p>A pass has a source position, a target position and a shooter.</p>
 </li>
 <li>
-<p>Score with the ball on an empty goal</p>
+<p>The source position is where a robot kicks the ball.</p>
 </li>
 <li>
-<p>Move the robot to specific coordinates</p>
+<p>The target position is where the ball stops or changes its direction.</p>
 </li>
 <li>
-<p>Score an indirect goal (two robots needed)</p>
+<p>The shooter is the robot located nearest to the source position when the pass starts.</p>
 </li>
-</ol>
-</div>
-<div class="paragraph">
-<p>Stage 1 is designed to demonstrate basic sensing and locomotion
-capabilities of each participating team.</p>
-</div>
-<div class="paragraph">
-<p>Stage 2 is designed to demonstrate similar skills to stage 1 plus the
-ability to localize and aim at a known target on the field.</p>
-</div>
-<div class="paragraph">
-<p>Stage 3 demonstrates strong localization abilities without the use of
-the global vision system.</p>
-</div>
-<div class="paragraph">
-<p>Stage 4 is designed to demonstrate coordination skill of multiple robots
-without vision. The robots must colaborate to pass and score the goal.</p>
-</div>
-<div class="paragraph">
-<p>We believe that teams who can complete even a single one of these
-skills without the vision system information will have an advantage in
-the main competition over those teams who rely solely on the global
-vision system.</p>
-</div>
-<div class="paragraph">
-<p>The following sections describe the hardware requirements, and
-procedures of each stage. The final chapter describes overall scoring
-that will be used to determine the winner.</p>
+<li>
+<p>The pass distance is the euclidean distance between the source and target position.</p>
+</li>
+</ul>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_hardwaresoftware_requirements">Hardware/Software Requirements</h2>
-<div class="sectionbody">
-<div class="sect2">
-<h3 id="_robot_hardware">Robot Hardware</h3>
-<div class="paragraph">
-<p>While we encourage participants to attempt the use of their blackout
-solutions during main competition to help deal with noise and dropouts
-in the global vision system, we recognize that integration into the
-main competition robots is a difficult task. For these reasons, the
-hardware restrictions are relaxed for this technical challenge.</p>
-</div>
-<div class="paragraph">
-<p>Teams may still remotely control their robots during normal
-competition, however, we encourage teams to experiment with onboard
-processing and autonomy. Regardless of where the control software
-executes, team will not receive data from the SSL vision
-software. Teams will still receive start, stop, and halt ref commands
-which will be used to initiate and stop trials of each stage.</p>
-</div>
-<div class="paragraph">
-<p>All robot hardware requirements apply to this challenge <strong>EXCEPT</strong> the height
-restrictions and the pattern markings. Participant robots may be taller than the
-rules dictate. The vision pattern on-top of the robot <strong>MUST</strong> be covered or
-removed to guarantee that ssl-vision is not being utilized. However, other rules
-such as maximum speed, kick power, ball manipulation strategies, etc. must still
-be observed.</p>
-</div>
-<div class="paragraph">
-<p>There are no restrictions on onboard sensor types. External sensors
-not attached to the robot are not allowed for this competition. We
-encourage teams to be creative in their choice of sensors and their
-strategies for completing each stage of the challenge. There is no
-restriction on processing power or where the processing takes
-place. However, keep in mind that bandwidth at competition is limited,
-so solutions requiring streaming large amounts of data wirelessly will
-likely not work.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_competition_procedure">Competition Procedure</h2>
+<h2 id="_scoring">Scoring</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>There are multiple stages with increasing difficulty.
-Each stage have three different situations.
-Participants will have only one trial per situation (three trials per stage).
-All trials will be considered for the overall score.</p>
+<p>A valid pass must meet the following criteria:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The pass distance must be at least <strong>1 m</strong>.</p>
+</li>
+<li>
+<p>The shooter and the receiver of the pass must be from the same team.</p>
+</li>
+<li>
+<p>The ball must not exceed 6.5m/s (as defined in the tournament rules).</p>
+</li>
+<li>
+<p>The source and target must be inside field lines.</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p>Each trial will be attempted by all participants, one after another.
-The starting configuration of the trial will be similar for each team to achieve same conditions for all participants.</p>
-</div>
-<div class="paragraph">
-<p>If a participant can not attempt a trial for what ever reasons, no points are awarded for this trial.
-Other trials are not effected.</p>
-</div>
-<div class="paragraph">
-<p>The robots may move anywhere on the field within the walls.
-Similarly, the ball may move anywhere on the field throughout the time.
-Any defined positions will always be inside the field boundaries.</p>
+<p>Each valid pass is worth one point.</p>
 </div>
 <div class="sect2">
-<h3 id="_field_setup">Field setup</h3>
+<h3 id="_evaluation">Evaluation</h3>
 <div class="paragraph">
-<p>Challenges will be executed on a Division B sized field as described in the main SSL rules.</p>
-</div>
-<div class="paragraph">
-<p>Because the vision patterns are not required, markings may be added to the field before a run to help the human judges verify that the robots are reaching the desired positions and orientations.
-Participants should not expect a perfect field with no additional markings.
-However, attempts will be made to keep the marks minimal and small to not interfere with on-board vision solutions.
-Additionally, participants should expect visual aspects of the field to vary slightly, including the exact color of the carpet and walls, the width of line markings, etc.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_referee_commands">Referee commands</h3>
-<div class="paragraph">
-<p>Each trial will start with a <strong>HALT</strong> command.
-Just before the start, a <strong>STOP</strong> command will be given to allow participants to prepare.
-When a <strong>FORCE START</strong> command is sent, the timer is started and robots may move.
-The trial will be stopped with a <strong>HALT</strong> command after successful challenge completion or after the time ran out</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_scoring">Scoring</h3>
-<div class="paragraph">
-<p>Each stage may define a set of criteria which give positive or negative points.
-Points will also be given if the overall objective was not achieved.
-The duration of a trial is used as a tie-breaker (faster is better).</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_stage_1_grab_a_stationary_ball">Stage 1: Grab a Stationary Ball</h3>
-<div class="paragraph">
-<p>This stage is designed to be the easiest and to demonstrate basic sensing and control capabilities.
-The robot will need to detect a ball on the field, navigate to it, and place it on its dribbler.</p>
-</div>
-<div class="sect3">
-<h4 id="_procedure">Procedure</h4>
-<div class="ulist">
-<ul>
-<li>
-<p>The supervisor defines random starting positions for robot and ball, as well as a random orientation for the robot.</p>
-</li>
-<li>
-<p>Robot and ball are placed on their starting positions</p>
-</li>
-<li>
-<p>The trial is started</p>
-</li>
-<li>
-<p>The trial is stopped after one minute or if the robot did not move for 10 seconds after moving at least once</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_scoring_2">Scoring</h4>
-<div class="ulist">
-<ul>
-<li>
-<p>Touching the ball with any part of the robot&#8201;&#8212;&#8201;+1</p>
-</li>
-<li>
-<p>Touching the ball with the dribbler&#8201;&#8212;&#8201;+1</p>
-</li>
-<li>
-<p>Robot stopped with the ball touching the dribbler at the end of the run-- +1</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_stage_2_scoring_on_an_empty_goal">Stage 2: Scoring on an Empty Goal</h3>
-<div class="paragraph">
-<p>This stage requires robots to localize a goal as well as the ball on the playing field, move to the ball and score a goal.</p>
-</div>
-<div class="sect3">
-<h4 id="_procedure_2">Procedure</h4>
-<div class="ulist">
-<ul>
-<li>
-<p>The supervisor defines a random robot starting position and orientation</p>
-</li>
-<li>
-<p>The supervisor defines a random ball starting position</p>
-</li>
-<li>
-<p>Robot and ball are placed on their starting positions</p>
-</li>
-<li>
-<p>The trial is started</p>
-</li>
-<li>
-<p>The trial is stopped after one minute or if the robot scored a goal</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_additional_rules">Additional Rules</h4>
-<div class="ulist">
-<ul>
-<li>
-<p>Either of the two goals may be used for scoring</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_scoring_3">Scoring</h4>
-<div class="ulist">
-<ul>
-<li>
-<p>Touching the ball with any part of the robot&#8201;&#8212;&#8201;+1</p>
-</li>
-<li>
-<p>Touching the ball with the dribbler&#8201;&#8212;&#8201;+1</p>
-</li>
-<li>
-<p>Ball entered any defense zone&#8201;&#8212;&#8201;+1</p>
-</li>
-<li>
-<p>Ball entered any goal&#8201;&#8212;&#8201;+1</p>
-</li>
-<li>
-<p>Robot entered any defense zone&#8201;&#8212;&#8201;-1</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_stage_3_moving_to_specific_coordinates">Stage 3: Moving to Specific Coordinates</h3>
-<div class="paragraph">
-<p>This stage is designed to demonstrate localization capabilities without the use of the global vision system.
-No ball will be used for this stage.</p>
-</div>
-<div class="sect3">
-<h4 id="_procedure_3">Procedure</h4>
-<div class="ulist">
-<ul>
-<li>
-<p>The supervisor defines a</p>
-<div class="ulist">
-<ul>
-<li>
-<p>random robot target position (no specific orientation is required)</p>
-</li>
-<li>
-<p>random robot starting orientation</p>
-</li>
-<li>
-<p>random robot starting position seed</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Participants may enter the starting position seed and the target position into their robot configuration</p>
-</li>
-<li>
-<p>The supervisor defines a random robot starting orientation</p>
-</li>
-<li>
-<p>The supervisor defines a random robot starting position that is within 0.5 m distance to the position seed</p>
-</li>
-<li>
-<p>The robot is placed on its starting position and turned to its starting orientation.</p>
-</li>
-<li>
-<p>The trial is started</p>
-</li>
-<li>
-<p>The trial is stopped after one minute or if the robot did not move for 10 seconds after moving at least once</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_scoring_4">Scoring</h4>
-<div class="paragraph">
-<p>The score is equal to the negative straight line distance between the robot&#8217;s final position and the destination position.
-(In other words, closer is better)</p>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_stage_4_scoring_an_indirect_goal_without_obstacles">Stage 4: Scoring an Indirect Goal (without Obstacles)</h3>
-<div class="paragraph">
-<p>The objective of this stage is to score an indirect goal using two robots.
-Robots are required to recognize other robots, receive a ball, coordinate between each other and finally to score a goal.</p>
-</div>
-<div class="sect3">
-<h4 id="_procedure_4">Procedure</h4>
-<div class="ulist">
-<ul>
-<li>
-<p>The supervisor defines a random ball starting position seed in the positive field half (positive x-coordinates)</p>
-</li>
-<li>
-<p>Robot 1 is placed on starting position [0.5 m, 1.5 m, 0°]</p>
-</li>
-<li>
-<p>Robot 2 is placed on starting position [0.5 m, -1.5 m, 0°]</p>
-</li>
-<li>
-<p>The ball is placed on a random starting position within 0.5 m distance of the position seed.</p>
-</li>
-<li>
-<p>The trial is started</p>
-<div class="ulist">
-<ul>
-<li>
-<p>The first robot that touches the ball will be considered the passer, and the other, the receiver.</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>The trial is stopped after two minutes or if a robot scored a goal</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_scoring_5">Scoring</h4>
-<div class="ulist">
-<ul>
-<li>
-<p>Touching the ball with any part of the passing robot&#8201;&#8212;&#8201;+1</p>
-</li>
-<li>
-<p>Touching the ball with the passing robot dribbler&#8201;&#8212;&#8201;+1</p>
-</li>
-<li>
-<p>Pass hits receiver robot&#8201;&#8212;&#8201;+1</p>
-</li>
-<li>
-<p>Pass hits the receiver robot dribbler&#8201;&#8212;&#8201;+1</p>
-</li>
-<li>
-<p>If both robots have touched the ball:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Ball entered any defense zone&#8201;&#8212;&#8201;+1</p>
-</li>
-<li>
-<p>Ball entered any goal&#8201;&#8212;&#8201;+1</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Robot entered any defense zone&#8201;&#8212;&#8201;-1</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_overall_scoring">Overall Scoring</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>As each stage is quite different in terms of scoring, in order to
-determine an overall winner, each stage will be ranked individually by
-total score. Depending on ranking in the category, each participant
-will get an amount of overall points. The amount of points is equal to
-the number of participants - placement in that stage. For example,
-with 7 participants, first place gets 6 points, second place gets 5,
-etc.</p>
+<p>Two or more members of OC/TC will be assigned to each challenge and act as the referee. The referee has the final decision on the result. If the two referees' counts differ, the final result will be the points average.</p>
 </div>
 <div class="paragraph">
-<p>Each of the stage points will then be totaled to determine an overall
-winner. Therefore, performance in all stages is considered equal in
-the final scoring.</p>
+<p>The points for each team from both games will be added and the team with the most points wins.
+Teams with the same number of points will share the better position.</p>
 </div>
-<div class="paragraph">
-<p>In the event of a tie, the team with the lowest total time across all
-the stages will win.</p>
 </div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2022-06-15 17:10:41 UTC
+Last updated 2024-03-08 21:09:08 UTC
 </div>
 </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>
+<script>
+if (!hljs.initHighlighting.called) {
+  hljs.initHighlighting.called = true
+  ;[].slice.call(document.querySelectorAll('pre.highlight > code[data-lang]')).forEach(function (el) { hljs.highlightBlock(el) })
+}
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  messageStyle: "none",
+  tex2jax: {
+    inlineMath: [["\\(", "\\)"]],
+    displayMath: [["\\[", "\\]"]],
+    ignoreClass: "nostem|nolatexmath"
+  },
+  asciimath2jax: {
+    delimiters: [["\\$", "\\$"]],
+    ignoreClass: "nostem|noasciimath"
+  },
+  TeX: { equationNumbers: { autoNumber: "none" } }
+})
+MathJax.Hub.Register.StartupHook("AsciiMath Jax Ready", function () {
+  MathJax.InputJax.AsciiMath.postfilterHooks.Add(function (data, node) {
+    if ((node = data.script.parentNode) && (node = node.parentNode) && node.classList.contains("stemblock")) {
+      data.math.root.display = "block"
+    }
+    return data
+  })
+})
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-MML-AM_HTMLorMML"></script>
 </body>
 </html>
