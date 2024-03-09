@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.21">
 <meta name="author" content="2024-03-09">
-<title>RoboCup 2024 SSL Black and White Hulls Technical Challenge Rules</title>
+<title>RoboCup 2024 Team vs. Team Passing Challenge</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /*! Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
@@ -438,21 +438,23 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </head>
 <body class="article">
 <div id="header">
-<h1>RoboCup 2024 SSL Black and White Hulls Technical Challenge Rules</h1>
+<h1>RoboCup 2024 Team vs. Team Passing Challenge</h1>
 <div class="details">
 <span id="author" class="author">2024-03-09</span><br>
 </div>
 <div id="toc" class="toc">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#_goals_of_the_technical_challenge">Goals of the Technical Challenge</a>
+<li><a href="#_goal">Goal</a></li>
+<li><a href="#_procedure">Procedure</a>
 <ul class="sectlevel2">
-<li><a href="#_participation_requirements">Participation Requirements</a></li>
+<li><a href="#_special_rule_set_during_the_technical_challenge">Special Rule Set during the Technical Challenge</a></li>
+<li><a href="#_pass_definitions">Pass Definitions</a></li>
 </ul>
 </li>
-<li><a href="#_evaluation">Evaluation</a>
+<li><a href="#_scoring">Scoring</a>
 <ul class="sectlevel2">
-<li><a href="#_scoring">Scoring</a></li>
+<li><a href="#_evaluation">Evaluation</a></li>
 </ul>
 </li>
 </ul>
@@ -470,7 +472,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </td>
 <td class="content">
 References to the male gender in the rules with respect to referees, team
-members, officials, etc. are for simplification and apply to both males and
+members, officials, etc., are for simplification and apply to both males and
 females.
 </td>
 </tr>
@@ -479,63 +481,157 @@ females.
 </div>
 </div>
 <div class="sect1">
-<h2 id="_goals_of_the_technical_challenge">Goals of the Technical Challenge</h2>
+<h2 id="_goal">Goal</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Given that most parts of the teams use similar hulls, differing only in the use of stickers and sponsorships, it can be difficult for spectators to differentiate the teams during a match only by observing the central blob color. Because of it, the TC/OC decided that, in the future, it would be preferable that opponent teams use different hull colors in a match. One team would use black hulls and the other team white hulls. So, the main goal of the challenge is that the teams bring ideas that solve this efficiently and don&#8217;t make logistics too complicated.</p>
+<p>A key distinguishing characteristic of the Small Size League is its tight integration of software and hardware, which is crucial to create a dynamic, collaborative soccer match.
+While this goal was pursued in last year&#8217;s SSL Chip Pass Challenge, the goal of this year&#8217;s challenge is to utilize last year&#8217;s work and adapt it to a more realistic situation.</p>
+</div>
+<div class="paragraph">
+<p>Therefore this year two teams will try to play as many passes as possible while competing against each other. To achieve this, the ruleset used last year has been adapted to the new situation.</p>
+</div>
+<div class="paragraph">
+<p>Although the teams, which have participated in one of the previous passing challenges, might have a slight advantage, we would like to encourage all teams to participate in this technical challenge.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_procedure">Procedure</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To level the playing field and to remove the impact of the performance of the opponent team on a teams score, each team will play two games against different contestants of the technical challenge. To reduce the risk of biases the TC/OC will draw the pairings for each match by random and announce the pairings together with the schedule for the technical challenge.</p>
+</div>
+<div class="paragraph">
+<p>Each game will have the following procedure:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>To reduce the preparation time, the team colors for each team will be determined by the TC/OC and announced together with the schedule of the technical challenge.</p>
+</li>
+<li>
+<p>To start the game, a kick-off command for the yellow team will be issued from the game controller. For the start the robots can be positioned in any way preferred, as long as the positioning does not violate the usual ruleset for a kick-off.</p>
+</li>
+<li>
+<p>After <strong>2 minutes of game time</strong> a stop command will be issued and the first half of the game is over.</p>
+</li>
+<li>
+<p>The half time break for this challenge will be only 60 seconds, since it should be mainly used to set up the robots at their desired position again and to exchange faulty robots.</p>
+</li>
+<li>
+<p>To start the second half a kick-off command for the blue team will be issued.</p>
+</li>
+<li>
+<p>After another <strong>2 minutes of game time</strong> a stop command will be issued and the game is over.</p>
+</li>
+</ul>
 </div>
 <div class="sect2">
-<h3 id="_participation_requirements">Participation Requirements</h3>
+<h3 id="_special_rule_set_during_the_technical_challenge">Special Rule Set during the Technical Challenge</h3>
 <div class="paragraph">
-<p>All teams are eligible and <strong>are encouraged</strong> to participate in this challenge.</p>
+<p>For the technical challenge a Div B field will be used with a maximum of 4 robots per team. If the ball leaves the field via any of the field lines, the game will be stopped and the team that did not last touch the ball gets awarded a kick-off.</p>
+</div>
+<div class="paragraph">
+<p>During the games of the technical challenge <strong>only</strong> the following fouls from the ssl rulebook apply:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Pushing</p>
+</li>
+<li>
+<p>Ball Holding</p>
+</li>
+<li>
+<p>Tipping over or dropping parts</p>
+</li>
+<li>
+<p>Boundary Crossing</p>
+</li>
+<li>
+<p>Excessive Dribbling</p>
+</li>
+<li>
+<p>Ball Speed</p>
+</li>
+<li>
+<p>Crashing</p>
+</li>
+<li>
+<p>Defender too close to ball</p>
+</li>
+<li>
+<p>Robot Stop Speed</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>If there is no progress in the game for 10 seconds while both teams are allowed to manipulate the ball, the game is stopped and the team that got the first kick-off of this halftime will get a kick off.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_pass_definitions">Pass Definitions</h3>
+<div class="paragraph">
+<p>Teams are free in how they perform the passes. Definitions of a pass in general and additional constraints needed for the scoring are given in this section.</p>
+</div>
+<div class="paragraph">
+<p>A pass is defined as follows:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>A pass has a source position, a target position and a shooter.</p>
+</li>
+<li>
+<p>The source position is where a robot kicks the ball.</p>
+</li>
+<li>
+<p>The target position is where the ball stops or changes its direction.</p>
+</li>
+<li>
+<p>The shooter is the robot located nearest to the source position when the pass starts.</p>
+</li>
+<li>
+<p>The pass distance is the euclidean distance between the source and target position.</p>
+</li>
+</ul>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_evaluation">Evaluation</h2>
+<h2 id="_scoring">Scoring</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Every team has a 5-minute pitch to explain their solution for the challenge and the built design and 5 minutes for possible questions. During the presentation, the TC/OC will measure the time of the team solution.</p>
-</div>
-<div class="paragraph">
-<p>At least one member of each team should be present during presentations since all teams will vote for the best solution.</p>
-</div>
-<div class="paragraph">
-<p>The following criteria will be evaluated.</p>
+<p>A valid pass must meet the following criteria:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Size efficiency</p>
+<p>The pass distance must be at least <strong>1 m</strong>.</p>
 </li>
 <li>
-<p>Durability</p>
+<p>The shooter and the receiver of the pass must be from the same team.</p>
 </li>
 <li>
-<p>Ease of changing</p>
+<p>The ball must not exceed 6.5m/s (as defined in the tournament rules).</p>
 </li>
 <li>
-<p>Costs</p>
-</li>
-<li>
-<p>Ease of building</p>
+<p>The source and target must be inside field lines.</p>
 </li>
 </ul>
 </div>
+<div class="paragraph">
+<p>Each valid pass is worth one point.</p>
+</div>
 <div class="sect2">
-<h3 id="_scoring">Scoring</h3>
+<h3 id="_evaluation">Evaluation</h3>
 <div class="paragraph">
-<p>After the presentations, every team will receive a ballot where they will rate the solutions from 1 to 5 for each criterion.</p>
+<p>Two or more members of OC/TC will be assigned to each challenge and act as the referee. The referee has the final decision on the result. If the two referees' counts differ, the final result will be the points average.</p>
 </div>
 <div class="paragraph">
-<p>The teams are encouraged to use their solutions in the matches to prove their efficiency to the others. Besides, the teams that use their solution in a game earn 5 extra points and can receive more 5 points if they switch the hulls during half-time.</p>
-</div>
-<div class="paragraph">
-<p>The TC/OC will average the points of each team. The team with the most points wins. In case of ties, the fastest team wins.</p>
-</div>
-<div class="paragraph">
-<p>The TC reserves the right to change the evaluation procedure.</p>
+<p>The points for each team from both games will be added and the team with the most points wins.
+Teams with the same number of points will share the better position.</p>
 </div>
 </div>
 </div>
@@ -553,5 +649,29 @@ if (!hljs.initHighlighting.called) {
   ;[].slice.call(document.querySelectorAll('pre.highlight > code[data-lang]')).forEach(function (el) { hljs.highlightBlock(el) })
 }
 </script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  messageStyle: "none",
+  tex2jax: {
+    inlineMath: [["\\(", "\\)"]],
+    displayMath: [["\\[", "\\]"]],
+    ignoreClass: "nostem|nolatexmath"
+  },
+  asciimath2jax: {
+    delimiters: [["\\$", "\\$"]],
+    ignoreClass: "nostem|noasciimath"
+  },
+  TeX: { equationNumbers: { autoNumber: "none" } }
+})
+MathJax.Hub.Register.StartupHook("AsciiMath Jax Ready", function () {
+  MathJax.InputJax.AsciiMath.postfilterHooks.Add(function (data, node) {
+    if ((node = data.script.parentNode) && (node = node.parentNode) && node.classList.contains("stemblock")) {
+      data.math.root.display = "block"
+    }
+    return data
+  })
+})
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-MML-AM_HTMLorMML"></script>
 </body>
 </html>
