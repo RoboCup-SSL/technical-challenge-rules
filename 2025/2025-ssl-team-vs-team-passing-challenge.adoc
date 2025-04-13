@@ -24,7 +24,7 @@ females.
 
 A key distinguishing characteristic of the Small Size League is its tight integration of software and hardware, which is crucial to create a dynamic, collaborative soccer match. 
 
-Like in 2024, this year two teams will try to play as many passes as possible while competing against each other. To achieve this, the official ruleset has been adapted to the new situation.
+As in 2024, two teams will try to play as many passes as possible while competing against each other. To achieve this, the official ruleset has been adapted to the new situation.
 
 We would like to encourage all teams to participate in this technical challenge.
 
