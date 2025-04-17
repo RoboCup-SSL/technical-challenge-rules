@@ -86,6 +86,6 @@ Each valid pass is worth one point.
 
 Two or more members of OC/TC will be assigned to each challenge and act as the referee. The referee has the final decision on the result. If the two referees' counts differ, the final result will be the points average.
 
-Last year's evaluation system has been reworked to provide a fairer result. The new system takes into account the relative strength of your opponent. A detailed explanation can be found here https://github.com/emielsteerneman/passing_challenge_scoring
+Last year's evaluation system has been reworked to provide a fairer result. The new system takes into account the relative strength of your opponent. A detailed explanation can be found here https://github.com/RoboCup-SSL/technical-challenge-rules/tree/master/2025/passing_challenge_scoring/
 
 Teams with the same number of points will share the better position.
