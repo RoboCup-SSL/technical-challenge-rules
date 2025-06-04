@@ -43,6 +43,7 @@ Obstacles may include:
 Each team is allowed up to three trials for each scenario. Only the best-scoring trial per scenario is counted. Each trial has a time limit of 30 seconds. There are 30 minutes per participating team. Teams have to manage this time themselves, and can allocate the time freely - including but not limited to spending it on debugging software or fixing robots, in addition to the actual trials. Be advised that the number of scenarios (with three trials each) is designed in a way that roughly takes up the full 30 minutes.
 
 === Procedure of a trial
+
 * The Game Controller, a vision software, and at least one slightly modified autoref (see below) have to be running.
 * The game stage is _FIRST HALF_ or _SECOND HALF_.
 * The participating team plays using a single *blue* robot. A non-participating team provides and controls the *yellow* robots, which act as obstacles.
@@ -58,6 +59,7 @@ Each team is allowed up to three trials for each scenario. Only the best-scoring
 
 === Special Rule Set during the Technical Challenge
 For this Technical Challenge, the normal SSL rules apply, with the following exceptions:
+
 * _Rule 8.4.1 Robot Too Close To Opponent Defense Area_ also applies during the game state BALL_PLACEMENT even though it ordinarily only applies to the game state STOP.
 * _Rule 8.4.2 Crashing_ will apply to any collision of two opposing robots, irrespective of their velocities.
 * _Rule 8.4.1 Robot Too Close To Opponent Defense Area_ and _Rule 8.4.3 Ball Placement Interference_ have their grace periods removed.
@@ -76,3 +78,5 @@ A team’s final challenge score is the sum of its scenario ranks. The team with
 challenge score (i.e., the best ranks across scenarios) wins. In case of a tie, the team with the
 higher total of scenario scores (i.e., total remaining time across all scenarios) is declared the
 winner.
+
+image::images/scenario_1.png[Scenario 1, width=600, align=center]
