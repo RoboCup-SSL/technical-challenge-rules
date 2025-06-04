@@ -33,6 +33,7 @@ All Division B teams are eligible and *encouraged* to participate in this challe
 This technical challenge contains multiple scenarios, published in roughly ascending order of difficulty on the first setup day. This is intended to incentivize the implementation of generalized obstacle avoidance rather than pre-scripted solutions. Two unused example scenarios are appended to this document.
 
 Obstacles may include:
+
 * The opponent *defense area* plus a 0.2m buffer (see _Rule 8.4.1 Robot Too Close To Opponent Defense Area_).
 * A *ball placement line* plus a 0.5m buffer (see _8.4.3 Ball Placement Interference_).
 * The *opponent robots* (some of which might be moving in a preprogrammed pattern, up to 1.0 m/s).
