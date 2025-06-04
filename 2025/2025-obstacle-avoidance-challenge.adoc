@@ -55,3 +55,24 @@ Each team is allowed up to three trials for each scenario. Only the best-scoring
  * The robot reaches the target (defined as the robot’s center being within 7 cm of the target position). There are no velocity requirements for reaching the target.
  * 30 seconds have elapsed.
  * The robot violates any obstacle constraint (detected via _BOT_CRASH_, _BOT_INTERFERED_PLACEMENT_, _ATTACKER_TOO_CLOSE_TO_DEFENSE_AREA_, or by human referee decision).
+
+=== Special Rule Set during the Technical Challenge
+For this Technical Challenge, the normal SSL rules apply, with the following exceptions:
+* _Rule 8.4.1 Robot Too Close To Opponent Defense Area_ also applies during the game state BALL_PLACEMENT even though it ordinarily only applies to the game state STOP.
+* _Rule 8.4.2 Crashing_ will apply to any collision of two opposing robots, irrespective of their velocities.
+* _Rule 8.4.1 Robot Too Close To Opponent Defense Area_ and _Rule 8.4.3 Ball Placement Interference_ have their grace periods removed.
+
+The Technical Committee will supply an accordingly modified Game Controller and Autoref.
+
+== Evaluation
+=== Trial evaluation
+Each trial is scored based on the remaining time (in seconds) when the robot reaches the target. If the robot fails to reach the target within 30 seconds or violates any rule, the trial score is zero.
+
+=== Scenario evaluation
+For each scenario, a team's scenario score is the highest trial score achieved across its three attempts. If a team does not attempt a scenario, the scenario score is zero by default. Teams are ranked based on their scenario scores. The team with the highest score receives rank 1, the next highest rank 2, and so on. A lower numerical rank is better. In the event of a tie, all tied teams share the numerically higher rank.
+
+=== Challenge evaluation
+A team’s final challenge score is the sum of its scenario ranks. The team with the lowest
+challenge score (i.e., the best ranks across scenarios) wins. In case of a tie, the team with the
+higher total of scenario scores (i.e., total remaining time across all scenarios) is declared the
+winner.
