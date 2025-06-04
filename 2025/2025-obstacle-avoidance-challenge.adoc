@@ -82,18 +82,20 @@ challenge score (i.e., the best ranks across scenarios) wins. In case of a tie, 
 higher total of scenario scores (i.e., total remaining time across all scenarios) is declared the
 winner.
 
+<<<
+
 == Appendix A: Example Scenarios
 
 === Example scenario 1
 
-image::images/scenario_1.png[Scenario 1, width=600, align=center, rotate=90]
+image::images/scenario_1.png[Scenario 1, width=600, align=center]
 
 In this straightforward scenario, the direct path from the starting position to the target is obstructed by three stationary yellow robots. The blue robot cannot pass between them, as the gaps are too narrow to avoid contact. Instead, the blue robot must fully circumvent all three obstacles.
 The opponent defense area—extended by 0.20 meters per Rule 8.4.1 (Robot Too Close To Opponent Defense Area)—is active in this scenario. However, it does not interfere with the likely path and can largely be disregarded.
 
 === Example scenario 2
 
-image::images/scenario_2.png[Scenario 1, width=600, align=center, rotate=90]
+image::images/scenario_2.png[Scenario 1, width=600, align=center]
 
 In this single example scenario, we show all possible elements that teams should prepare for. This scenario is harder than what teams should expect to come up during the technical challenge. 
 
