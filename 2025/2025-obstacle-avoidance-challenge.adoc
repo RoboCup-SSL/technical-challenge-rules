@@ -16,36 +16,21 @@ endif::backend-html5[]
 :icons: font
 :numbered:
 
-NOTE: References to the male gender in the rules with respect to referees, team
-members, officials, etc., are for simplification and apply to both males and
-females.
+NOTE: References to the male gender in the rules with respect to referees, team members, officials, etc., are for simplification and apply to both males and females.
 
 == Goal of the Technical Challenge
-Obstacles are a central part in high level SSL matches. They can be defined directly by the 
-rules (e.g. _Rule 8.4.1 Robot Too Close To Opponent Defense Area_), by the rules in combination
-with other factors like the position of the ball (e.g. _Rule 8.4.3 Defender Too Close To Ball_) 
-or other robots (see, Crashing), or result from strategic robot positioning (e.g., for blocking
-or coordination).
+Obstacles are a central part in high level SSL matches. They can be defined directly by the rules (e.g. _Rule 8.4.1 Robot Too Close To Opponent Defense Area_), by the rules in combination with other factors like the position of the ball (e.g. _Rule 8.4.3 Defender Too Close To Ball_) or other robots (see, Crashing), or result from strategic robot positioning (e.g., for blocking or coordination).
 
-However, obstacle avoidance - especially with moving obstacles - is a hard task. In Division B, 
-many of the rules that force obstacle avoidance can often be ignored: Crashes are not penalized 
-if the robot is driving slowly; Ball placement is optional; and rules like 
-_Rule 8.4.1 Robot Too Close To Opponent Defense Area_ are often ignored by teams, and regularly 
-cause long interruptions in matches when the autoref (correctly!) detects infractions.
+However, obstacle avoidance - especially with moving obstacles - is a hard task. In Division B, many of the rules that force obstacle avoidance can often be ignored: Crashes are not penalized if the robot is driving slowly; Ball placement is optional; and rules like _Rule 8.4.1 Robot Too Close To Opponent Defense Area_ are often ignored by teams, and regularly cause long interruptions in matches when the autoref (correctly!) detects infractions.
 
-This technical challenge incentivizes teams in Division B to work on both their implementation of 
-rule-based obstacles and their obstacle avoidance.
+This technical challenge incentivizes teams in Division B to work on both their implementation of rule-based obstacles and their obstacle avoidance.
 
 === Participation Requirements
-All Division B teams are eligible and *encouraged* to participate in this challenge. Teams who 
-have previously participated in Division A are ineligible and cannot participate. 
+All Division B teams are eligible and *encouraged* to participate in this challenge. Teams who have previously participated in Division A are ineligible and cannot participate. 
 
 == Procedure
 === General
-This technical challenge contains multiple scenarios, published in roughly ascending order of 
-difficulty on the first setup day. This is intended to incentivize the implementation of 
-generalized obstacle avoidance rather than pre-scripted solutions. Two unused example scenarios 
-are appended to this document.
+This technical challenge contains multiple scenarios, published in roughly ascending order of difficulty on the first setup day. This is intended to incentivize the implementation of generalized obstacle avoidance rather than pre-scripted solutions. Two unused example scenarios are appended to this document.
 
 Obstacles may include:
 * The opponent *defense area* plus a 0.2m buffer (see _Rule 8.4.1 Robot Too Close To Opponent Defense Area_).
@@ -53,12 +38,7 @@ Obstacles may include:
 * The *opponent robots* (some of which might be moving in a preprogrammed pattern, up to 1.0 m/s).
 * One *virtual line* between two robots with ID 2 and 3, which must not be crossed. Note that if the robots with ID 2 and 3 are on the field, there will always be a virtual line between them.
 
-Each team is allowed up to three trials for each scenario. Only the best-scoring trial per 
-scenario is counted. Each trial has a time limit of 30 seconds. There are 30 minutes per 
-participating team. Teams have to manage this time themselves, and can allocate the time 
-freely - including but not limited to spending it on debugging software or fixing robots, 
-in addition to the actual trials. Be advised that the number of scenarios (with three trials 
-each) is designed in a way that roughly takes up the full 30 minutes.
+Each team is allowed up to three trials for each scenario. Only the best-scoring trial per scenario is counted. Each trial has a time limit of 30 seconds. There are 30 minutes per participating team. Teams have to manage this time themselves, and can allocate the time freely - including but not limited to spending it on debugging software or fixing robots, in addition to the actual trials. Be advised that the number of scenarios (with three trials each) is designed in a way that roughly takes up the full 30 minutes.
 
 === Procedure of a trial
 
@@ -85,21 +65,15 @@ For this Technical Challenge, the normal SSL rules apply, with the following exc
 The Technical Committee will supply an accordingly modified Game Controller and Autoref.
 
 == Evaluation
+
 === Trial evaluation
-Each trial is scored based on the remaining time (in seconds) when the robot reaches the target.
-If the robot fails to reach the target within 30 seconds or violates any rule, the trial score is zero.
+Each trial is scored based on the remaining time (in seconds) when the robot reaches the target. If the robot fails to reach the target within 30 seconds or violates any rule, the trial score is zero.
 
 === Scenario evaluation
-For each scenario, a team's scenario score is the highest trial score achieved across its three attempts. 
-If a team does not attempt a scenario, the scenario score is zero by default. Teams are ranked based on
-their scenario scores. The team with the highest score receives rank 1, the next highest rank 2, and so
-on. A lower numerical rank is better. In the event of a tie, all tied teams share the numerically higher rank.
+For each scenario, a team's scenario score is the highest trial score achieved across its three attempts. If a team does not attempt a scenario, the scenario score is zero by default. Teams are ranked based on their scenario scores. The team with the highest score receives rank 1, the next highest rank 2, and so on. A lower numerical rank is better. In the event of a tie, all tied teams share the numerically higher rank.
 
 === Challenge evaluation
-A team’s final challenge score is the sum of its scenario ranks. The team with the lowest
-challenge score (i.e., the best ranks across scenarios) wins. In case of a tie, the team with the
-higher total of scenario scores (i.e., total remaining time across all scenarios) is declared the
-winner.
+A team’s final challenge score is the sum of its scenario ranks. The team with the lowest challenge score (i.e., the best ranks across scenarios) wins. In case of a tie, the team with the higher total of scenario scores (i.e., total remaining time across all scenarios) is declared the winner.
 
 <<<
 
@@ -109,14 +83,9 @@ winner.
 
 image::images/scenario_1.png[Scenario 1, width=600, align=center]
 
-In this straightforward scenario, the direct path from the starting position to the target is
-obstructed by three stationary yellow robots. The blue robot cannot pass between them, as the
-gaps are too narrow to avoid contact. Instead, the blue robot must fully circumvent all three
-obstacles.
+In this straightforward scenario, the direct path from the starting position to the target is obstructed by three stationary yellow robots. The blue robot cannot pass between them, as the gaps are too narrow to avoid contact. Instead, the blue robot must fully circumvent all three obstacles.
 
-The opponent defense area—extended by 0.20 meters per Rule 8.4.1 (Robot Too Close To Opponent
-Defense Area)—is active in this scenario. However, it does not interfere with the likely path
-and can largely be disregarded.
+The opponent defense area—extended by 0.20 meters per Rule 8.4.1 (Robot Too Close To Opponent Defense Area)—is active in this scenario. However, it does not interfere with the likely path and can largely be disregarded.
 
 <<<
 
@@ -124,25 +93,10 @@ and can largely be disregarded.
 
 image::images/scenario_2.png[Scenario 1, width=600, align=center]
 
-In this single example scenario, we show all possible elements that teams should prepare for. 
-This scenario is harder than what teams should expect to come up during the technical challenge. 
+In this single example scenario, we show all possible elements that teams should prepare for. This scenario is harder than what teams should expect to come up during the technical challenge. 
 
-First, the direct path from the starting position to the target is obstructed both by the opponent 
-defense area and the ball placement exclusion area. The blue robot has to find a path that avoids 
-both. Initially, the only way to avoid both the defense area and the ball placement exclusion area
-(since they overlap) is to drive up to the center circle to drive around both. However, the yellow
-robot holding the ball moves it backwards and forwards with 1.0 m/s on the dotted line, which will
-open a path for the blue robot between the defense area and the ball placement exclusion area.
+First, the direct path from the starting position to the target is obstructed both by the opponent defense area and the ball placement exclusion area. The blue robot has to find a path that avoids both. Initially, the only way to avoid both the defense area and the ball placement exclusion area (since they overlap) is to drive up to the center circle to drive around both. However, the yellow robot holding the ball moves it backwards and forwards with 1.0 m/s on the dotted line, which will open a path for the blue robot between the defense area and the ball placement exclusion area.
 
-If that path is taken, the next obstacle are the two stationary central yellow robots. The space
-between the defense area and the closer robot is insufficient to pass between. Instead, the blue
-robot can either pass between the two yellow robots, which do offer enough space to fit, but only
-barely (0.20 m), or can go around both.
+If that path is taken, the next obstacle are the two stationary central yellow robots. The space between the defense area and the closer robot is insufficient to pass between. Instead, the blue robot can either pass between the two yellow robots, which do offer enough space to fit, but only barely (0.20 m), or can go around both.
 
-Finally, the two last yellow robots form a virtual line which the blue robot cannot touch. These
-robots have the ID 2 and 3. Note that if the robots with ID 2 and 3 are on the field, there will always be a virtual line between them.
-Both ends of the line are “held” by a robot and can therefore move. Unlike the ball placement line,
-this line does not have a margin. The yellow robot furthest away from the starting position moves back
-and forth on the dotted line with 0.5 m/s, moving one end of the line with it. Depending on timing,
-the blue robot has to drive a shorter or longer path to circumvent this final obstacle and drive
-towards the goal point.
+Finally, the two last yellow robots form a virtual line which the blue robot cannot touch. These robots have the ID 2 and 3. Note that if the robots with ID 2 and 3 are on the field, there will always be a virtual line between them. Both ends of the line are “held” by a robot and can therefore move. Unlike the ball placement line, this line does not have a margin. The yellow robot furthest away from the starting position moves back and forth on the dotted line with 0.5 m/s, moving one end of the line with it. Depending on timing, the blue robot has to drive a shorter or longer path to circumvent this final obstacle and drive towards the goal point.
