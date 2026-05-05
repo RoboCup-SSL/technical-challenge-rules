@@ -1,0 +1,23 @@
+:source-highlighter: highlightjs
+
+= RoboCup 2026 Shared Radio Challenge
+{docdate}
+:toc:
+:stem: latexmath
+:sectnumlevels: 0
+
+// add icons from fontawesome in a up-to-date version
+ifdef::backend-html5[]
+++++
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+++++
+endif::backend-html5[]
+
+:icons: font
+:numbered:
+
+NOTE: References to the male gender in the rules with respect to referees, team members, officials, etc., are for simplification and apply to both males and females.
+
+== Goal and Motivation
+
+tbd
