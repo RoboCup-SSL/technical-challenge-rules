@@ -1,0 +1,197 @@
+:source-highlighter: highlightjs
+
+= Radio Communications Technical Challenge
+{docdate}
+:toc:
+:stem: latexmath
+:sectnumlevels: 0
+
+// add icons from fontawesome in a up-to-date version
+ifdef::backend-html5[]
+++++
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+++++
+endif::backend-html5[]
+
+:icons: font
+:numbered:
+
+NOTE: References to the male gender in the rules with respect to referees, team members, officials, etc., are for simplification and apply to both males and females.
+
+== Goal and Motivation
+
+*We want teams to collaborate directly to profile quantitative radio performance and open-source their solutions to help make the SSL friendly to new teams.*
+We are not going to mandate the use of a specific radio technology.
+
+The SSL leadership wants to provide known good radio solutions to teams in the league to:
+
+1. Lower the barrier of entry for new teams
+2. Encourage the adoption of solutions that perform well, reducing overall variety and likelihood that any team has a radio related failure
+3. Provide documented, open-source modules that may be usable by other leagues
+
+This goal is driven by the fact that radio related failures (for any team new or returning) often have a very high impact on gameplay.
+While there is substantial educational value in designing and integrating solutions, three things seem apparent:
+
+1. Using a radio technology the league has established as "effective" does not meaningfully diminish the educational value of integrating that technology into a custom stack
+2. Effective radio technologies exist within the league, but lack sufficient data and open source information to be effectively replicated
+3. There are few, if any, teams using non-commercial radio technologies.
+
+*The league does not seek to mandate a solution*, but offer options well characterized by data collected in a competition environment, with substantial open-source artifacts to make replication quick, easy, and deterministic.
+
+*We are committed to offering this challenge for at least 3 years.*
+Teams may take lessons learned and collaborations from the end of each year and re-submit or evolve the technology.
+
+== Technical Challenge Details
+
+Radio technologies are divided into two submission categories, Wi-Fi (802.11) and ISM.
+
+*Submissions are required to release editable documentation, firmware, and hardware artifacts*.
+For example, PDF, binary, and gerber files are not accepted if the accompanying editable file format is also not included.
+
+If commercial modules are used, firmware and hardware artifacts may be unavailable.
+This is okay, but any firmware and hardware used to interface with the commercial module must be released.
+Teams do not need to release any other parts of their firmware or hardware designs if they do not wish to do so.
+If you have a particularly effective technology that's broadly available, but requires a non-disclosure or other legal agreement, please contact the TC.
+Our main objective is to find effective solutions, so we don't want to exclude such options.
+
+The use of open-source tools is strongly encouraged.
+E.g. We strongly prefer documentation in LaTeX or markdown instead of Microsoft Word (for example).
+We strongly prefer the use of open source compilers like gcc, clang, and rustc over closed source compilers like Kiel or Intel.
+We prefer electrical schematics and board layouts in KiCad over Altium or EAGLE.
+Strong open source submissions should include IDE agnostic build environments and compilers, targeting Ubuntu 24.04 or WSL equivalent.
+Environments should provide as much automation as possible for package installation for compilers and libraries.
+Consider using environment management techniques that guarantee reproduction across operating systems like https://nixos.org/[Nix] or https://www.docker.com/[Docker].
+
+=== Wi-Fi Technical Challenge
+
+The Wi-Fi facet of this challenge covers any 802.11 standard supporting at least 4 channels.
+We exclude 2.4GHz Wi-Fi because channels other than 1, 6, and 11 are fake channels, so it cannot support 4 concurrent matches and cannot support each team having its own channel.
+Wi-Fi standards in the 5GHz and 6Ghz bands are allowed.
+Any future standards covering frequency bands >6GHz are also likely to be allowed.
+The TC will provide a shared Wi-Fi network as described by https://docs.google.com/document/d/1ZWLjyoNuG8dFr9B2DSkJpK30gnuZRwcICuXRqCodTNY/edit?usp=sharing[this document] that teams are encouraged to use as ***part*** of their submission.
+We are interested in comparing performance data with the shared network in various configurations against the Wi-Fi routers and networks the teams currently use.
+
+Teams must demonstrate the ability to quickly switch between wireless networks at the same or different fields.
+Data should be collected during a short friendly match.
+
+Teams must communicate their methodology to gather radio performance data as described in the evaluation section.
+
+=== ISM Technical Challenge
+
+ISM facet of the challenge covers any legal communication method not using the 802.11 standard.
+Radios in this category are legal entries if they:
+
+1. Can be forced to a fixed frequency (prohibits Bluetooth and any frequency hopping standards)
+2. Supports at least 8 non-overlapping channels (4 concurrent matches)
+
+Examples of radios we know teams used: Nordic 2.4GHz ICs and modules, 900MHz modules (800Mhz european equivalent), etc.
+400/500MHz and other not currently used technologies are also in scope as long as they meet the above requirements.
+
+Ultra-WideBand (UWB) technologies are exempt from the fixed frequency requirement due the nature of their functionality, as long as they provide an equivalent of "channels" and a reasonable bound can be provided on the data rate and channel allocation for 4 concurrent matches (8 concurrent teams).
+
+The TC is primarily interested in understanding where the data-rate limits occur in ISM technologies, and if there are options to standardize on specific bandwidths and modulations for common modules.
+If the league can standardize bandwidths and modulations for popular modules, then detecting conflicts and interference at large competitions becomes substantially easier.
+
+=== Evaluation
+
+Evaluation is based on the quality of the data of the submission, not the performance of the radio itself.
+The TC wants the league to show well characterized options for radios so a team can pick something that meets their needs.
+
+Teams should, to the extent possible, fill out this table *before and during competition*.
+The table should be posted in an open-source repository.
+A brief description of how the data points were estimated/computed should be included.
+For year one, we are not mandating a data collection method.
+We may impose requirements in future years based on methods that work the best.
+
+[cols="1,1", options="header"]
+|===
+| Metric | Reporting Metric
+
+| Round-Trip Latency^1^
+| Mean: ms, Variance: ms, Max^2^: ms
+
+| Average Packet Loss
+| Percentage
+
+| Data Rate^3^
+| Mean: kbit/s, Variance: kbit/s
+
+| Detect Interference
+| Yes/No
+
+| Start Up Time
+| ms
+
+| Power Consumption
+| Mean: mW, Variance: mW
+
+| Cost
+| USD (estimate exchange rate)
+
+| Firmware Source
+| Text (ASCII or UTF)
+
+| eCAD
+| KiCAD Preferred
+|===
+
+^1^ If a radio solution is one direction, report one-way latency +
+^2^ If your radio has a hardware priority queueing capability, report max latency as well +
+^3^ Report from the perspective of the base station
+
+=== Scoring
+
+[cols="1,1,1,1", options="header"]
+|===
+| Category | Poor (1-3) | Acceptable (4-6) | Excellent (7-10)
+
+| Quality of Data
+| Metrics are not reported or description is not given as to how they were computed.
+| Some metrics are reported and descriptions are available.
+| All metrics reported, with statistics, and methodology is strongly justified.
+
+| Quality of Firmware
+| Firmware was not released.
+| Firmware was released but lacked documentation and setup instructions.
+| Firmware released, documentation and environment setup provided.
+
+| Quality of eCAD
+| Open source hardware not released, or released only as production artifacts.
+| Hardware released, but no documentation or production artifacts.
+| Hardware released, production artifacts included, documentation included.
+
+| A team is able to partially or fully use another team's radio technology during competition.
+3+| 0-15 points awarded
+|===
+
+A survey will be sent to competition participants to rank teams in the above areas.
+The overall score will be a sum of the quality sections (1-9 point each), and the sharing section.
+The minimum score is 3, and the maximum score is 45.
+Because radio technologies differ, methods to measure key data may also differ.
+If a team feels that a methodology lacks merit, it should be reflected in the assigned score.
+A free response section is included to provide detail.
+*To be clear, teams are scoring the quality of the data and the ease of understanding, not the performance of the radio.*
+
+== Submission Information
+
+=== Submission
+
+*Teams are highly encouraged to submit partial solutions.*
+This helps find future points of collaboration.
+
+*Teams should submit a link to any preliminary data, firmware and hardware to the mailing list by 26 JUN 2026.*
+Teams may begin reviewing at this point.
+
+Teams should be prepared to give a brief presentation during the event summarizing lab and/or event radio data, collection/computation methodology, and a brief overview of the firmware and hardware submitted.
+The TC will clarify at the event the maximum presentation duration based on the number of submissions, but plan for ~10 minutes.
+*The TC will try to schedule the presentations around 3 JUL 2026.*
+
+=== Teaming
+
+Because this technical challenge is intended to be collaborative, we are changing the typical submission guidance.
+
+* Individual teams may submit up to three (3) entries.
+* Teams may submit collaborative entries.
+* Collaborative entries count as a submission for all teams involved.
+
+For example if ER-Force works with TIGERs on Radio technology A, and ER-Force works with The A-Team on radio technology B, then ER-Force has used two (2) submission entries, and TIGERs and The A-Team one (1) each.
