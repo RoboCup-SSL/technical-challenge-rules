@@ -40,8 +40,8 @@ The Technical Challenge will take place on a full size Div B field, which has no
 
 With that the setup of the challenge start could look as following:
 
-[[field-dimensions-a]]
-.Field dimensions and markings for division A
+[[TC-Setup]]
+.Position of the robots at the start of the Technical Challenge
 image::TC_Setup.png[]
 
 === Procedure
