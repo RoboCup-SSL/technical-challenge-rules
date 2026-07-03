@@ -41,7 +41,7 @@ The Technical Challenge will take place on a full size Div B field, which has no
 With that the setup of the challenge start could look as following:
 
 [[TC-Setup]]
-.Position of the robots at the start of the Technical Challenge
+.Positions of both robots, as well as the ball at the start of the Technical Challenge (M=Major Bot, J=Junior Bot )
 image::TC_Setup.png[]
 
 === Procedure
